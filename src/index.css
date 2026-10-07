@@ -1,0 +1,52 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Sora:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+  --spacing-fluid-x: clamp(16px, -6.535px + 6.01vw, 80px);
+
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sora: 'Sora', sans-serif;
+  --font-clash: 'Clash Display', sans-serif;
+
+  --text-display-12: 96px;
+  --text-display-12--line-height: 96px;
+
+  --text-display-11: 72px;
+  --text-display-11--line-height: 72px;
+
+  --text-display-10: 60px;
+  --text-display-10--line-height: 60px;
+
+  --text-display-9: 48px;
+  --text-display-9--line-height: 48px;
+
+  --text-display-8: 36px;
+  --text-display-8--line-height: 40px;
+
+  --text-display-7: 30px;
+  --text-display-7--line-height: 36px;
+
+  --text-display-6: 24px;
+  --text-display-6--line-height: 32px;
+
+  --text-display-5: 20px;
+  --text-display-5--line-height: 28px;
+
+  --text-display-4: 18px;
+  --text-display-4--line-height: 24px;
+
+  --text-display-3: 16px;
+  --text-display-3--line-height: 22px;
+
+  --text-display-2: 14px;
+  --text-display-2--line-height: 20px;
+
+  --text-display-1: 12px;
+  --text-display-1--line-height: 18px;
+
+  --text-paragraph-lg: 18px;
+  --text-paragraph-lg--line-height: 28px;
+}
