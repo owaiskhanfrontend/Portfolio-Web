@@ -2,7 +2,7 @@ import isometriclayer from "../../assets/Home assets/hero_bg.webp"
 import logo from "../../assets/Home assets/Logo.svg"
 import vectorline from "../../assets/Home assets/Vector 1.svg"
 import puzzleicon from "../../assets/Home assets/puzzleicon.svg"
-import code from "../../assets//Home assets/react.png"
+import text from "../../assets//Home assets/text.webp"
 
 function Hero() {
   return (
@@ -67,6 +67,7 @@ function Hero() {
                   </div>
             </div>
                   <div className="w-full h-full bg-white/4 border border-white/8 rounded backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300 hover:border-white/12 hover:bg-white/6">
+                    <img src={text} alt="" className="w-full h-full object-contain" />
                   </div>
             </div>
       </div>
