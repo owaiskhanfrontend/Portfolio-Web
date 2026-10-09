@@ -40,8 +40,8 @@ function About() {
         
       
         <div className="w-full max-w-3xl flex flex-col gap-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-white">The Journey</h2>
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+          <h2 className="text-display-6 md:text-display-9 font-bold text-white font-clash">The Journey</h2>
+          <p className="text-gray-300 text-display-4 md:text-display-5 leading-relaxed font-poppins">
             Over the past ten months of full-time study, I have transitioned from mastering HTML, CSS, and JavaScript fundamentals to architecting production-quality frontend applications using React.js. I specialize in building highly responsive, visually engaging user interfaces that bridge the gap between design and engineering.
           </p>
   
@@ -66,8 +66,8 @@ function About() {
 
              
                 <div className="flex flex-col gap-2 px-2">
-                  <h3 className="text-xl font-bold text-white tracking-wide">{item.text}</h3>
-                  <p className="text-sm text-gray-400">{item.description}</p>
+                  <h3 className="text-display-5 font-bold text-white tracking-wide font-clash">{item.text}</h3>
+                  <p className="text-display-4 text-gray-400">{item.description}</p>
                 </div>
 
               </div>
