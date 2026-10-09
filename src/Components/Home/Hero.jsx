@@ -2,7 +2,7 @@ import isometriclayer from "../../assets/Home assets/hero_bg.webp"
 import logo from "../../assets/Home assets/Logo.svg"
 import vectorline from "../../assets/Home assets/Vector 1.svg"
 import puzzleicon from "../../assets/Home assets/puzzleicon.svg"
-import text from "../../assets//Home assets/text.webp"
+import text from "../../assets//Home assets/text2.webp"
 
 function Hero() {
   return (
