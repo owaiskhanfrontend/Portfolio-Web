@@ -1,16 +1,20 @@
-# React + Vite
+# Creative 3D Portfolio & IDE Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance personal portfolio built to showcase production-grade frontend applications, featuring an interactive 3D "IDE" HUD architecture. Currently developing and applying from Karachi, Pakistan.
 
-Currently, two official plugins are available:
+- **YouTube Channel:** [@OwaisKhanFrontEnd-dev](https://www.youtube.com/@OwaisKhanFrontEnd-dev)
+- **LinkedIn:** [Profile](https://www.linkedin.com/in/owais-khan-ab3ab2436/?isSelfProfile=true)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Featured Projects
+- **Moon E-Commerce:** Full-featured React 19 application utilizing Tailwind CSS, Context API state management, DummyJSON API, and custom Blender 3D assets. 
+  - [Live Demo](https://moon-e-commerce.netlify.app/) | [🎨 Figma Design](https://www.figma.com/design/OA5JQHlCktJlOEFDCD6mou/Moon-Ceramic---Furniture-Store-ECommerce-Website-Shop)
 
-## React Compiler
+- **Weather Dashboard:** Zero-framework responsive weather dashboard built with vanilla JavaScript ES6 modules, Open-Meteo API, and browser Geolocation API. 
+  - [Live Demo](https://owaiskhan-weather-dashboard.netlify.app/) | [🎨 Figma Design](https://www.figma.com/design/jPmWHmeF2DlfbylbU4t7lr/Weather-Dashboard--Community-?node-id=0-1&t=Ck2iutJ4m5ci29hE-0)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+- **Frontend Architecture:** React 19, JavaScript (ES6+), Tailwind CSS v4
+- **Design & 3D Assets:** Figma-to-code implementation, Blender (Custom 3D modeling)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 About
+Built with a hybrid architecture—baking high-quality 3D assets for visual depth while keeping text and UI elements as responsive React components for maximum performance and accessibility.
