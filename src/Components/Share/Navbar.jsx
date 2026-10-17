@@ -87,9 +87,10 @@ function Navbar() {
             </svg>
           </button>
 
-          {/* Desktop Menu */}
+        
           <div className="hidden lg:flex items-center bg-white/4 border border-white/8 px-8 py-2.5 rounded-full backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300 hover:border-white/12 hover:bg-white/6">
             <div className="flex items-center gap-9">
+              <div onClick={() => scrollToSection("Home")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer uppercase">Main</div>
               <div onClick={() => scrollToSection("About")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">About Me</div>
               <div onClick={() => scrollToSection("Skill")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">Skills</div>
               <div onClick={() => scrollToSection("Projects")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">Projects</div>
@@ -103,9 +104,10 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+   
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-[#111] border-b border-white/10 shadow-lg md:flex lg:hidden flex flex-col p-6 gap-6 z-40 text-white font-clash">
+            <div className="text-lg hover:text-white/70 cursor-pointer uppercase" onClick={() => scrollToSection("Home")}>main</div>
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("About")}>About Me</div>
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("Skill")}>Skills</div>
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("Projects")}>Project</div>

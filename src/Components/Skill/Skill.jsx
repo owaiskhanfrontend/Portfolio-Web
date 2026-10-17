@@ -1,26 +1,27 @@
 import { useState } from "react";
-import figmaicon from "../../assets/skill assets/figma icon.svg"
-import reactjsicon from "../../assets/skill assets/react.js icon.svg"
-import javascripticon from "../../assets/skill assets/javascript icon.svg"
+import figmaicon from "../../assets/skill assets/figmablender.webp"
+import reactblender from "../../assets/skill assets/reactblender.webp"
+import JSblender from "../../assets/skill assets/JSblender.webp"
 import apiicon from "../../assets/skill assets/web-api-icon.svg"
-import blendericon from "../../assets/skill assets/blender-icon.svg"
-import githubicon from "../../assets/skill assets/github icon.svg"
-import tailwindcssicon from "../../assets/skill assets/tailwind-css icon.svg"
-import html5icon from "../../assets/skill assets/html-5-icon.svg"
+import blendericon from "../../assets/skill assets/blender.webp"
+import githublender from "../../assets/skill assets/githublender.webp"
+import tailwindblender from "../../assets/skill assets/tailwindblender.webp"
+import htmlblender from "../../assets/skill assets/htmlblender.webp"
+import cssblender from "../../assets/skill assets/cssblender.webp"
 
 function Skill() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const Skilldata = [
     { id: 1, img: figmaicon, text: "Figma To Code", color: "#F24E1E" },
-    { id: 2, img: tailwindcssicon, text: "Tailwind CSS", color: "#61DAFB" },
-    { id: 3, img: javascripticon, text: "JavaScript", color: "#F7DF1E" },
-    { id: 4, img: reactjsicon, text: "React.js", color: "#61DAFB" },
+    { id: 2, img: tailwindblender, text: "Tailwind CSS", color: "#61DAFB" },
+    { id: 3, img: JSblender, text: "JavaScript", color: "#F7DF1E" },
+    { id: 4, img: reactblender, text: "React.js", color: "#61DAFB" },
     { id: 5, img: apiicon, text: "Context api", color: "#339933" },
     { id: 6, img: blendericon, text: "Blender 3D", color: "#F5792A" },
-    { id: 7, img: githubicon, text: "Git & GitHub", color: "#FFFFFF" },
-    { id: 8, img: html5icon, text: "HTML5", color: "#E34F26" },
-    { id: 8, img: figmaicon, text: "CSS3", color: "#E34F26" }
+    { id: 7, img: githublender, text: "Git & GitHub", color: "#FFFFFF" },
+    { id: 8, img: htmlblender, text: "HTML5", color: "#E34F26" },
+    { id: 9, img: cssblender, text: "CSS3", color: "#33a9dc" }
   ];
 
   return (
@@ -53,8 +54,7 @@ function Skill() {
                   boxShadow: hoveredIndex === index ? `0 0 15px ${item.color}40` : "none"
                 }}
               >
-            
-                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-2.5 backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
+                <div className="w-18 h-18 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-2.5 backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
                   <img src={item.img} alt="skill-icon" className="w-full h-full object-contain" />
                 </div>
             
@@ -67,11 +67,7 @@ function Skill() {
               </div>
             ))}
           </div>
-          <div className="w-full min-h-[350px] flex items-center justify-center border border-white/10 rounded-2xl bg-white/2 backdrop-blur-md mt-6">
-            <span className="text-white/40 font-poppins text-sm uppercase tracking-widest">
-            
-            </span>
-          </div>
+
         </div>
       </div>
     </div>
