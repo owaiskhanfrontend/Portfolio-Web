@@ -32,7 +32,7 @@ function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full flex flex-col gap-7">
+      <div className="relative z-10 w-full flex flex-col gap-7 pt-30 md:pt-40">
         
         <div className="w-full flex flex-col items-center gap-4">
           <span className="text-display-4 font-poppins font-medium text-white/70 tracking-wide text-center">

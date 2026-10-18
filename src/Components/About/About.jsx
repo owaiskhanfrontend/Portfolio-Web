@@ -14,16 +14,17 @@ function About() {
     },
     {
       id: 2,
-      img: brain,
-      text: "Frontend Dev",
-      description: "Architecting production-quality web applications."
-    },
-    {
-      id: 3,
       img: blendericon,
       text: "3D Assets",
       description: "Modeling and embedding custom Blender assets for immersive UIs."
     },
+    {
+      id: 3,
+      img: brain,
+      text: "Frontend Dev",
+      description: "Architecting production-quality web applications."
+    },
+
     {
       id: 4,
       img: jobready,
