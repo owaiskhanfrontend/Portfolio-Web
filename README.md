@@ -7,7 +7,7 @@ A high-performance personal portfolio built to showcase production-grade fronten
 
 ## 🚀 Featured Projects
 - **Moon E-Commerce:** Full-featured React 19 application utilizing Tailwind CSS, Context API state management, DummyJSON API, and custom Blender 3D assets. 
-  - [Live Demo](https://moon-e-commerce.netlify.app/) | [🎨 Figma Design](https://www.figma.com/design/OA5JQHlCktJlOEFDCD6mou/Moon-Ceramic---Furniture-Store-ECommerce-Website-Shop)
+  - [Live Demo](https://owaiskhan-moon-e-commerce.netlify.app/) | [🎨 Figma Design](https://www.figma.com/design/OA5JQHlCktJlOEFDCD6mou/Moon-Ceramic---Furniture-Store-ECommerce-Website-Shop)
 
 - **Weather Dashboard:** Zero-framework responsive weather dashboard built with vanilla JavaScript ES6 modules, Open-Meteo API, and browser Geolocation API. 
   - [Live Demo](https://owaiskhan-weather-dashboard.netlify.app/) | [🎨 Figma Design](https://www.figma.com/design/jPmWHmeF2DlfbylbU4t7lr/Weather-Dashboard--Community-?node-id=0-1&t=Ck2iutJ4m5ci29hE-0)
