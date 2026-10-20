@@ -59,6 +59,28 @@ function Projects() {
       liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
       githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
     },
+    {
+      id: 2,
+      title: "Moon E-Commerce",
+      tagline: "Featured Project",
+      description:
+        "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON APIs.",
+      tech: ["React 19", "Tailwind CSS v4", "Blender 3D", "Context API"],
+      image: pcui,
+      liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
+      githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
+    },
+    {
+      id: 3,
+      title: "Moon E-Commerce",
+      tagline: "Featured Project",
+      description:
+        "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON APIs.",
+      tech: ["React 19", "Tailwind CSS v4", "Blender 3D", "Context API"],
+      image: pcui,
+      liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
+      githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
+    },
   ];
 
   return (
