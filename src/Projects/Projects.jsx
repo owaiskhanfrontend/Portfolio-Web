@@ -3,11 +3,26 @@ import foldericon from "../assets/Projects assets/folderblender3.webp";
 import project1 from "../assets/Projects assets/weather dashboard.png";
 import project2 from "../assets/Projects assets/moon e commerce.png";
 import project3 from "../assets/Projects assets/portfolio web.png";
+
 import pcui from "../assets/Projects assets/pc ui card-1.png";
+import pcui2 from "../assets/Projects assets/pc ui card-2.png";
+import pcui3 from "../assets/Projects assets/pc ui card-3.png";
+
+import figmaicon from "../assets/skill assets/figmablender.webp";
+import reactblender from "../assets/skill assets/reactblender.webp";
+import JSblender from "../assets/skill assets/JSblender.webp";
+import blendericon from "../assets/skill assets/blender.webp";
+import githublender from "../assets/skill assets/githublender.webp";
+import tailwindblender from "../assets/skill assets/tailwindblender.webp";
+import htmlblender from "../assets/skill assets/htmlblender.webp";
+import cssblender from "../assets/skill assets/cssblender.webp";
+import contextapiblender from "../assets/skill assets/contextapiblender.webp";
+import stateblender from "../assets/skill assets/stateblender.webp";
 
 function Projects() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [hoveredTechIndex, setHoveredTechIndex] = useState(null);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +45,7 @@ function Projects() {
       const currentScroll = windowHeight - elementTop - windowHeight / 3;
 
       let progress = currentScroll / scrollRange;
-      progress = Math.max(0, Math.min(1, progress)); 
+      progress = Math.max(0, Math.min(1, progress));
       setScrollProgress(progress);
     };
 
@@ -54,39 +69,57 @@ function Projects() {
       tagline: "Featured Project",
       description:
         "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON APIs.",
-      tech: ["React 19", "Tailwind CSS v4", "Blender 3D", "Context API"],
+      techStack: [
+        { name: "Figma", img: figmaicon, color: "#F24E1E" },
+        { name: "React 19", img: reactblender, color: "#61DAFB" },
+        { name: "JavaScript", img: JSblender, color: "#F7DF1E" },
+        { name: "Tailwind CSS", img: tailwindblender, color: "#61DAFB" },
+        { name: "Blender 3D", img: blendericon, color: "#F5792A" },
+        { name: "Context API", img: contextapiblender, color: "#6eeb2c" },
+        { name: "State", img: stateblender, color: "#953FFF" },
+      ],
       image: pcui,
       liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
       githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
     },
     {
       id: 2,
-      title: "Moon E-Commerce",
+      title: "Weather Dashboard",
       tagline: "Featured Project",
       description:
-        "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON APIs.",
-      tech: ["React 19", "Tailwind CSS v4", "Blender 3D", "Context API"],
-      image: pcui,
-      liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
-      githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
+        "Zero-framework responsive weather dashboard application built using vanilla JavaScript ES6 modules, Open-Meteo API, and browser Geolocation API for real-time climate tracking.",
+      techStack: [
+        { name: "JavaScript", img: JSblender, color: "#F7DF1E" },
+        { name: "HTML5", img: htmlblender, color: "#E34F26" },
+        { name: "CSS3", img: cssblender, color: "#33a9dc" },
+        { name: "Figma", img: figmaicon, color: "#F24E1E" },
+      ],
+      image: pcui2,
+      liveUrl: "https://owaiskhan-weather-dashboard.netlify.app",
+      githubUrl: "https://github.com/owaiskhanfrontend/Weather-Dashboard",
     },
     {
       id: 3,
-      title: "Moon E-Commerce",
+      title: "Portfolio Web",
       tagline: "Featured Project",
       description:
-        "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON APIs.",
-      tech: ["React 19", "Tailwind CSS v4", "Blender 3D", "Context API"],
-      image: pcui,
-      liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
-      githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
+        "High-performance personal developer portfolio architected with React, Tailwind CSS v4, custom 3D Blender assets, and fluid interactive scroll animations.",
+      techStack: [
+        { name: "React 19", img: reactblender, color: "#61DAFB" },
+        { name: "Tailwind CSS", img: tailwindblender, color: "#61DAFB" },
+        { name: "Blender 3D", img: blendericon, color: "#F5792A" },
+        { name: "Figma", img: figmaicon, color: "#F24E1E" },
+      ],
+      image: pcui3,
+      liveUrl: "https://owaiskhanfrontend.netlify.app",
+      githubUrl: "https://github.com/owaiskhanfrontend/Portfolio",
     },
   ];
 
   return (
-    <div className="w-full h-auto bg-black overflow-hidden pb-24">
-      <div className="w-full max-w-7xl h-auto px-4 md:px-8 mx-auto py-12 md:py-20">
-        <div className="w-full h-auto flex flex-col gap-12">
+    <div className="w-full h-auto bg-black overflow-hidden">
+      <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto py-12 md:py-20">
+        <div className="w-full h-auto flex flex-col gap-6 md:gap-12">
           
           <div className="w-full h-auto flex flex-col items-center text-center gap-2">
             <h2 className="text-3xl md:text-5xl font-medium text-white font-clash">
@@ -99,7 +132,7 @@ function Projects() {
 
           <div 
             ref={containerRef} 
-            className="relative flex items-center justify-center h-[280px] md:h-[380px] mt-8 md:mt-12"
+            className="relative flex items-center justify-center h-[217px] md:h-[380px] mt-8 md:mt-12"
           >
             <img 
               alt="Weather Dashboard" 
@@ -148,77 +181,104 @@ function Projects() {
             />
           </div>
 
-          <div className="w-full flex flex-col gap-24 md:gap-32 mt-6">
-            {projectsList.map((project) => (
-              <div 
-                key={project.id}
-                className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12"
-              >
-                <div className="w-full lg:w-5/12 flex flex-col z-20">
-                  <span className="text-[#6eeb2c] font-mono text-sm tracking-widest uppercase mb-1">
-                    {project.tagline}
-                  </span>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white font-clash mb-6">
-                    {project.title}
-                  </h3>
+          <div className="w-full flex flex-col gap-4 md:gap-32 mt-6">
+            {projectsList.map((project, index) => {
+              const isEven = index % 2 === 1;
+              return (
+                <div 
+                  key={project.id}
+                  className={`relative w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ${isEven ? "lg:flex-row-reverse" : ""}`}
+                >
+                  <div className="w-full lg:w-5/12 flex flex-col z-20">
+                    <span className="text-[#6eeb2c] font-clash font-semibold text-display-4 tracking-widest uppercase mb-1">
+                      {project.tagline} {index + 1}
+                    </span>
+                    <h3 className="text-display-6 md:text-display-8 font-bold text-white font-clash mb-6">
+                      {project.title}
+                    </h3>
 
-                  <div className="bg-[#111115]/90 border border-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-2xl z-30 lg:-mr-12 xl:-mr-16">
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                      {project.description}
-                    </p>
+                    <div className={`bg-purple-400/10 border border-white/8 rounded-2xl backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300 hover:border-white/12 hover:bg-white/6 p-6 md:p-8 shadow-2xl z-30 flex flex-col gap-4 ${isEven ? "xl:-ml-16" : "xl:-mr-16"}`}>
+                      
+                      <div className="flex flex-col gap-3">
+                        <div className="font-poppins text-display-4 text-white font-medium">Tech Stack Used</div>
+                        
+                        <div className="w-full flex flex-wrap items-center gap-3">
+                          {project.techStack.map((tech, idx) => {
+                            const globalIdx = `${index}-${idx}`;
+                            const isHovered = hoveredTechIndex === globalIdx;
+                            return (
+                              <div
+                                key={idx}
+                                onMouseEnter={() => setHoveredTechIndex(globalIdx)}
+                                onMouseLeave={() => setHoveredTechIndex(null)}
+                                title={tech.name}
+                                className="relative group w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center p-2 cursor-pointer transition-all duration-300"
+                                style={{
+                                  backgroundColor: isHovered ? "rgba(255, 255, 255, 0.08)" : "rgba(255, 255, 255, 0.03)",
+                                  border: `1px solid ${isHovered ? tech.color : "rgba(255, 255, 255, 0.12)"}`,
+                                  boxShadow: isHovered 
+                                    ? `0 0 15px ${tech.color}80, inset 0 0 8px ${tech.color}40` 
+                                    : "0 0 8px rgba(255, 255, 255, 0.04)",
+                                  transform: isHovered ? "scale(1.15)" : "scale(1)"
+                                }}
+                              >
+                                <img 
+                                  src={tech.img} 
+                                  alt={tech.name} 
+                                  className="w-full h-full object-contain filter drop-shadow-md" 
+                                />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
 
-                    <div className="flex flex-wrap gap-2 mt-6">
-                      {project.tech.map((item, idx) => (
-                        <span 
-                          key={idx}
-                          className="bg-white/5 border border-white/10 text-xs text-[#6eeb2c] px-3 py-1 rounded-full font-mono"
-                        >
-                          {item}
-                        </span>
-                      ))}
+                      <p className="text-gray-300 text-display-2 md:text-display-3 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-6 mt-6 pl-2">
+                      <a 
+                        href={project.liveUrl} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-sm group"
+                      >
+                        <span>Live Preview</span>
+                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+
+                      <a 
+                        href={project.githubUrl} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium text-sm group"
+                      >
+                        <span>GitHub Repo</span>
+                        <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0.5 transition-transform group-hover:scale-110">
+                          <img src={githublender} alt="github-icon" className="w-full h-full object-contain" />
+                        </div>
+                      </a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-6 mt-6 pl-2">
-                    <a 
-                      href={project.liveUrl} 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-sm"
-                    >
-                      <span>Live Preview</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 font-medium text-sm"
-                    >
-                      <span>GitHub Repo</span>
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                      </svg>
-                    </a>
+                  <div className="w-full lg:w-7/12 relative group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-[#3a3845]/100 to-[#3a3845]/100 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
+                    <div className="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full">
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-500 ease-out"
+                      />
+                    </div>
                   </div>
                 </div>
-
-                <div className="w-full lg:w-7/12 relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#6eeb2c]/20 to-purple-600/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                  <div className="relative bg-[#18181f] border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-500 ease-out"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-
         </div>
       </div>
     </div>
