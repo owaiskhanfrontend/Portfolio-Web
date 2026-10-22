@@ -1,23 +1,23 @@
 import { useState, useEffect, useRef } from "react";
-import foldericon from "../assets/Projects assets/folderblender3.webp";
-import project1 from "../assets/Projects assets/weather dashboard.png";
-import project2 from "../assets/Projects assets/moon e commerce.png";
-import project3 from "../assets/Projects assets/portfolio web.png";
+import foldericon from "../../assets/Projects assets/folderblender3.webp";
+import project1 from "../../assets/Projects assets/weather dashboard.png";
+import project2 from "../../assets/Projects assets/moon e commerce.png";
+import project3 from "../../assets/Projects assets/portfolio web.png";
 
-import pcui from "../assets/Projects assets/pc ui card-1.png";
-import pcui2 from "../assets/Projects assets/pc ui card-2.png";
-import pcui3 from "../assets/Projects assets/pc ui card-3.png";
+import pcui from "../../assets/Projects assets/pc ui card-1.png";
+import pcui2 from "../../assets/Projects assets/pc ui card-2.png";
+import pcui3 from "../../assets/Projects assets/pc ui card-3.png";
 
-import figmaicon from "../assets/skill assets/figmablender.webp";
-import reactblender from "../assets/skill assets/reactblender.webp";
-import JSblender from "../assets/skill assets/JSblender.webp";
-import blendericon from "../assets/skill assets/blender.webp";
-import githublender from "../assets/skill assets/githublender.webp";
-import tailwindblender from "../assets/skill assets/tailwindblender.webp";
-import htmlblender from "../assets/skill assets/htmlblender.webp";
-import cssblender from "../assets/skill assets/cssblender.webp";
-import contextapiblender from "../assets/skill assets/contextapiblender.webp";
-import stateblender from "../assets/skill assets/stateblender.webp";
+import figmaicon from "../../assets/skill assets/figmablender.webp";
+import reactblender from "../../assets/skill assets/reactblender.webp";
+import JSblender from "../../assets/skill assets/JSblender.webp";
+import blendericon from "../../assets/skill assets/blender.webp";
+import githublender from "../../assets/skill assets/githublender.webp";
+import tailwindblender from "../../assets/skill assets/tailwindblender.webp";
+import htmlblender from "../../assets/skill assets/htmlblender.webp";
+import cssblender from "../../assets/skill assets/cssblender.webp";
+import contextapiblender from "../../assets/skill assets/contextapiblender.webp";
+import stateblender from "../../assets/skill assets/stateblender.webp";
 
 function Projects() {
   const [scrollProgress, setScrollProgress] = useState(0);

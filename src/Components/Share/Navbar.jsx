@@ -111,6 +111,7 @@ function Navbar() {
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("About")}>About Me</div>
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("Skill")}>Skills</div>
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("Projects")}>Project</div>
+            <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("Lessons")}>Lessons</div>
             <div className="text-lg hover:text-white/70 cursor-pointer" onClick={() => scrollToSection("Contact")}>Contact me</div>
             
             <button className="mt-2 py-3 w-full rounded-full font-medium flex items-center justify-center bg-white text-black text-lg cursor-pointer hover:bg-neutral-200 active:scale-95 transition-transform">

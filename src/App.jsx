@@ -2,7 +2,8 @@ import Navbar from "./Components/Share/Navbar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Skill from "./Components/Skill/Skill";
-import Projects from "./Projects/Projects";
+import Projects from "./Components/Projects/Projects";
+import Lessons from "./Components/Lesson/Lessons";
 function App() {
   return (
     <>
@@ -21,6 +22,10 @@ function App() {
 
         <section id="Projects">
           <Projects />
+        </section>
+
+        <section id="Lessons">
+          <Lessons />
         </section>
 
       </main>
