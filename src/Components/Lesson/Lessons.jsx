@@ -22,6 +22,17 @@ function Lessons() {
     },
   ];
 
+  const moonEcommerceMistakes = [
+    {
+      title: "GIT VERSION CONTROL HABITS",
+      desc: "Initially delayed pushing code early on in development. Learned the hard way to commit and push frequently to maintain clean history checkpoints.",
+    },
+    {
+      title: "ASSET WEIGHT AUDITING",
+      desc: "Carried forward asset size lessons learned from previous builds to ensure 3D models and textures remained lightweight and web-optimized.",
+    },
+  ];
+
   const weatherDashboardLessons = [
     {
       title: "MONOLITHIC FILE SWITCHING",
@@ -42,6 +53,17 @@ function Lessons() {
     {
       title: "UNOPTIMIZED SCRIPT LOADING",
       desc: "Direct script tags and manual DOM canvas initializations often blocked main-thread parsing and caused layout shifts during asset fetch operations.",
+    },
+  ];
+
+  const weatherDashboardMistakes = [
+    {
+      title: "UNOPTIMIZED ASSET OVER SIGHT",
+      desc: "Mistakenly left an unoptimized asset bloat up to 800KB during early development. It was a painful lesson on payload tracking that was fully fixed and optimized later in the e-commerce build.",
+    },
+    {
+      title: "DELAYED REMOTE BACKUPS",
+      desc: "Just like the portfolio web build, delayed initial code pushes early in the project lifecycle, teaching me the critical value of consistent version control.",
     },
   ];
 
@@ -98,6 +120,30 @@ function Lessons() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-8 pt-6 border-t border-purple-500/30 flex flex-col gap-4">
+                  <h4 className="font-clash text-xs md:text-sm font-bold tracking-widest text-purple-300 uppercase">
+                    ⚠️ Mistakes & Key Takeaways
+                  </h4>
+                  <div className="flex flex-col gap-5">
+                    {moonEcommerceMistakes.map((item, idx) => (
+                      <div key={idx} className="flex gap-3.5 items-start">
+                        <div className="w-6 h-6 rounded-full bg-purple-500/20 border border-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                          <span className="text-purple-300 text-xs font-bold">!</span>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <h5 className="text-purple-200 font-clash text-xs md:text-sm font-semibold tracking-wider">
+                            {item.title}
+                          </h5>
+                          <p className="text-gray-300 font-poppins text-xs md:text-sm leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -129,6 +175,30 @@ function Lessons() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-4">
+                  <h4 className="font-clash text-xs md:text-sm font-bold tracking-widest text-gray-400 uppercase">
+                    ⚠️ Mistakes & Key Takeaways
+                  </h4>
+                  <div className="flex flex-col gap-5">
+                    {weatherDashboardMistakes.map((item, idx) => (
+                      <div key={idx} className="flex gap-3.5 items-start">
+                        <div className="w-6 h-6 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center shrink-0 mt-0.5">
+                          <span className="text-red-400 text-xs font-bold">!</span>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <h5 className="text-red-300 font-clash text-xs md:text-sm font-semibold tracking-wider">
+                            {item.title}
+                          </h5>
+                          <p className="text-gray-400 font-poppins text-xs md:text-sm leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </div>
             </div>
 
