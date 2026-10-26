@@ -198,10 +198,8 @@ function Lessons() {
                     ))}
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
