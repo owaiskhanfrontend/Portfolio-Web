@@ -5,6 +5,7 @@ import Skill from "./Components/Skill/Skill";
 import Projects from "./Components/Projects/Projects";
 import Lessons from "./Components/Lesson/Lessons";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Share/Footer";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
 
         <section id="Contact">
           <Contact />
+        </section>
+
+        <section id="Footer">
+          <Footer />
         </section>
 
       </main>

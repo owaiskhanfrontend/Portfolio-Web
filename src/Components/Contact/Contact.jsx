@@ -59,7 +59,7 @@ function Contact() {
   return (
     <div
       ref={containerRef}
-      className="w-full bg-black overflow-x-hidden relative flex flex-col justify-start py-12 md:py-20"
+      className="w-full h-[1300px] bg-black overflow-x-hidden relative flex flex-col justify-start py-12 md:py-20"
     >
       <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto">
         <h2 className="w-full text-center font-poppins text-2xl sm:text-3xl md:text-5xl font-bold text-white tracking-wide z-10">
