@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import StickyProjectCard from "./StickyProjectCard";
 import foldericon from "../../assets/Projects assets/folderblender3.webp";
 import project1 from "../../assets/Projects assets/weather dashboard.png";
 import project2 from "../../assets/Projects assets/moon e commerce.png";
@@ -12,7 +13,6 @@ import figmaicon from "../../assets/skill assets/figmablender.webp";
 import reactblender from "../../assets/skill assets/reactblender.webp";
 import JSblender from "../../assets/skill assets/JSblender.webp";
 import blendericon from "../../assets/skill assets/blender.webp";
-import githublender from "../../assets/skill assets/githublender.webp";
 import tailwindblender from "../../assets/skill assets/tailwindblender.webp";
 import htmlblender from "../../assets/skill assets/htmlblender.webp";
 import cssblender from "../../assets/skill assets/cssblender.webp";
@@ -117,7 +117,7 @@ function Projects() {
   ];
 
   return (
-    <div className="w-full h-auto bg-black overflow-hidden">
+    <div className="w-full h-auto bg-black">
       <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto py-12 md:py-20">
         <div className="w-full h-auto flex flex-col gap-6 md:gap-12">
           
@@ -181,104 +181,18 @@ function Projects() {
             />
           </div>
 
-          <div className="w-full flex flex-col gap-4 md:gap-32 mt-6">
-            {projectsList.map((project, index) => {
-              const isEven = index % 2 === 1;
-              return (
-                <div 
-                  key={project.id}
-                  className={`relative w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ${isEven ? "lg:flex-row-reverse" : ""}`}
-                >
-                  <div className="w-full lg:w-5/12 flex flex-col z-20">
-                    <span className="text-[#6eeb2c] font-clash font-semibold text-display-4 tracking-widest uppercase mb-1">
-                      {project.tagline} {index + 1}
-                    </span>
-                    <h3 className="text-display-6 md:text-display-8 font-bold text-white font-clash mb-6">
-                      {project.title}
-                    </h3>
-
-                    <div className={`bg-purple-400/10 border border-white/8 rounded-2xl backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300 hover:border-white/12 hover:bg-white/6 p-6 md:p-8 shadow-2xl z-30 flex flex-col gap-4 ${isEven ? "xl:-ml-16" : "xl:-mr-16"}`}>
-                      
-                      <div className="flex flex-col gap-3">
-                        <div className="font-poppins text-display-4 text-white font-medium">Tech Stack Used</div>
-                        
-                        <div className="w-full flex flex-wrap items-center gap-3">
-                          {project.techStack.map((tech, idx) => {
-                            const globalIdx = `${index}-${idx}`;
-                            const isHovered = hoveredTechIndex === globalIdx;
-                            return (
-                              <div
-                                key={idx}
-                                onMouseEnter={() => setHoveredTechIndex(globalIdx)}
-                                onMouseLeave={() => setHoveredTechIndex(null)}
-                                title={tech.name}
-                                className="relative group w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center p-2 cursor-pointer transition-all duration-300"
-                                style={{
-                                  backgroundColor: isHovered ? "rgba(255, 255, 255, 0.08)" : "rgba(255, 255, 255, 0.03)",
-                                  border: `1px solid ${isHovered ? tech.color : "rgba(255, 255, 255, 0.12)"}`,
-                                  boxShadow: isHovered 
-                                    ? `0 0 15px ${tech.color}80, inset 0 0 8px ${tech.color}40` 
-                                    : "0 0 8px rgba(255, 255, 255, 0.04)",
-                                  transform: isHovered ? "scale(1.15)" : "scale(1)"
-                                }}
-                              >
-                                <img 
-                                  src={tech.img} 
-                                  alt={tech.name} 
-                                  className="w-full h-full object-contain filter drop-shadow-md" 
-                                />
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-
-                      <p className="text-gray-300 text-display-2 md:text-display-3 leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div className="flex items-center gap-6 mt-6 pl-2">
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
-                        rel="noreferrer"
-                        className="text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-sm group"
-                      >
-                        <span>Live Preview</span>
-                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noreferrer"
-                        className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium text-sm group"
-                      >
-                        <span>GitHub Repo</span>
-                        <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0.5 transition-transform group-hover:scale-110">
-                          <img src={githublender} alt="github-icon" className="w-full h-full object-contain" />
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="w-full lg:w-7/12 relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-[#3a3845]/100 to-[#3a3845]/100 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                    <div className="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full">
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-500 ease-out"
-                      />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="w-full flex flex-col relative mt-12 space-y-12">
+            {projectsList.map((project, index) => (
+              <StickyProjectCard 
+                key={project.id}
+                project={project}
+                index={index}
+                hoveredTechIndex={hoveredTechIndex}
+                setHoveredTechIndex={setHoveredTechIndex}
+              />
+            ))}
           </div>
+
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Lessons from "./Components/Lesson/Lessons";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Share/Footer";
 
+
 function App() {
   return (
     <>
