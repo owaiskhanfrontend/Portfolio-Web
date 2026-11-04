@@ -130,6 +130,8 @@ function Projects() {
             </h2>
           </div>
 
+          
+
           <div 
             ref={containerRef} 
             className="relative flex items-center justify-center h-[217px] md:h-[380px] mt-8 md:mt-12"

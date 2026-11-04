@@ -59,7 +59,7 @@ function Contact() {
   return (
     <div
       ref={containerRef}
-      className="w-full h-[1300px] bg-black overflow-x-hidden relative flex flex-col justify-start py-12 md:py-20"
+      className="w-full h-auto min-h-[1000px] bg-black overflow-x-hidden relative flex flex-col justify-start py-12 md:py-20"
     >
       <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto">
         <h2 className="w-full text-center font-poppins text-2xl sm:text-3xl md:text-5xl font-bold text-white tracking-wide z-10">
@@ -68,7 +68,6 @@ function Contact() {
       </div>
 
       <div className="w-full relative h-[250px] sm:h-[380px] md:h-[550px] lg:h-[650px] flex items-center justify-center my-6 md:my-10 pointer-events-none">
-        
         <motion.div
           style={{ x: leftHandX }}
           className="absolute left-0 top-1/2 -translate-y-1/2 w-[55vw] sm:w-[60vw] md:w-[52vw] max-w-[880px] flex justify-end z-20"
@@ -91,18 +90,22 @@ function Contact() {
           />
         </motion.div>
 
-  
         <motion.div
           style={{ scale: glowScale, opacity: glowOpacity }}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10"
         >
- 
           <div className="absolute w-20 h-20 sm:w-36 sm:h-36 md:w-48 md:h-48 bg-purple-500/40 rounded-full blur-2xl" />
           <div className="w-36 h-36 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-600/25 blur-[70px] rounded-full" />
         </motion.div>
       </div>
 
-      <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto flex flex-col gap-10 z-30">
+      <div className="w-full max-w-4xl px-4 md:px-8 mx-auto z-30 mt-4 md:mt-8">
+        <div className="w-full bg-[#0a0a0a] border border-[#222222] rounded-2xl p-8 md:p-10 flex flex-col items-center justify-center text-center shadow-[0_0_35px_rgba(168,85,247,0.15)] relative overflow-hidden backdrop-blur-md">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-purple-500/70 to-transparent"></div>
+          <h3 className="text-2xl md:text-3xl font-medium text-white font-poppins mb-3 tracking-wide">
+            adding Contact Details
+          </h3>
+        </div>
       </div>
     </div>
   );
