@@ -90,7 +90,7 @@ function Lessons() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-6 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-6 items-stretch">
             
             <div className="w-full bg-gradient-to-b from-[#250b3f] to-[#120422] border-2 border-purple-500/60 shadow-[0_0_35px_rgba(168,85,247,0.35)] rounded-3xl p-6 md:p-10 flex flex-col justify-between">
               <div>

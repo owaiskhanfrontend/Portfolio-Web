@@ -32,19 +32,19 @@ function Contact() {
   const getXRanges = () => {
     if (screenTier === "mobile") {
       return {
-        left: ["-48vw", "-0.8vw"],
-        right: ["48vw", "0.8vw"],
+        left: ["-48vw", "-0.6vw"],
+        right: ["48vw", "0.6vw"],
       };
     }
     if (screenTier === "tablet") {
       return {
-        left: ["-52vw", "-0.5vw"],
-        right: ["52vw", "0.5vw"],
+        left: ["-50vw", "-0.4vw"],
+        right: ["50vw", "0.4vw"],
       };
     }
     return {
-      left: ["-54vw", "0vw"],
-      right: ["54vw", "0vw"],
+      left: ["-52vw", "-0.2vw"],
+      right: ["52vw", "0.2vw"],
     };
   };
 
@@ -62,7 +62,7 @@ function Contact() {
       className="w-full h-auto min-h-[1000px] bg-black overflow-x-hidden relative flex flex-col justify-start py-12 md:py-20"
     >
       <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto">
-        <h2 className="w-full text-center font-poppins text-2xl sm:text-3xl md:text-5xl font-bold text-white tracking-wide z-10">
+        <h2 className="w-full text-center font-clash text-2xl sm:text-display-7 md:text-display-9 font-bold text-white tracking-wide z-10">
           One Journey. Every Skill That Matters.
         </h2>
       </div>
@@ -70,7 +70,7 @@ function Contact() {
       <div className="w-full relative h-[250px] sm:h-[380px] md:h-[550px] lg:h-[650px] flex items-center justify-center my-6 md:my-10 pointer-events-none">
         <motion.div
           style={{ x: leftHandX }}
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-[55vw] sm:w-[60vw] md:w-[52vw] max-w-[880px] flex justify-end z-20"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-[50vw] sm:w-[49vw] md:w-[48vw] max-w-[820px] flex justify-end z-20"
         >
           <img
             src={human_hand}
@@ -81,7 +81,7 @@ function Contact() {
 
         <motion.div
           style={{ x: rightHandX }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-[55vw] sm:w-[60vw] md:w-[52vw] max-w-[880px] flex justify-start z-20"
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-[50vw] sm:w-[49vw] md:w-[48vw] max-w-[820px] flex justify-start z-20"
         >
           <img
             src={robo_hand}

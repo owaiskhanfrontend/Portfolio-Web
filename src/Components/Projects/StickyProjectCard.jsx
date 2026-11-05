@@ -6,7 +6,7 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
 
   return (
     <div 
-      className={`sticky ${stickyOffsets[index] || "top-44"} w-full transition-all duration-300 pb-12`}
+      className={`sticky ${stickyOffsets[index] || "top-44"} w-full transition-all duration-300 `}
       style={{ zIndex: index + 1 }}
     >
       <div className={`w-full bg-[#0a0a0a] backdrop-blur-2xl border border-white/15 rounded-3xl p-6 md:p-12 shadow-[0_-30px_60px_rgba(0,0,0,0.95)] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ${isEven ? "lg:flex-row-reverse" : ""}`}>
@@ -54,7 +54,7 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
               </div>
             </div>
 
-            <p className="text-gray-300 text-display-2 md:text-display-3 leading-relaxed">
+            <p className="font-poppins text-gray-300 text-display-2 md:text-display-3 leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -64,7 +64,7 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
               href={project.liveUrl} 
               target="_blank" 
               rel="noreferrer"
-              className="text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-sm group"
+              className="font-poppins text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-display-2 group"
             >
               <span>Live Preview</span>
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
               href={project.githubUrl} 
               target="_blank" 
               rel="noreferrer"
-              className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium text-sm group"
+              className="font-poppins text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium text-display-2 group"
             >
               <span>GitHub Repo</span>
               <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0.5 transition-transform group-hover:scale-110">
