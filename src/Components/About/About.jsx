@@ -1,10 +1,9 @@
-import foundationicon from "../../assets/about assets/foundation.webp"
-import brain from "../../assets/about assets/brain.webp"
-import blendericon from "../../assets/about assets/blender.webp"
-import jobready from "../../assets/about assets/jobready.webp"
+import foundationicon from "../../assets/about assets/foundation.webp";
+import brain from "../../assets/about assets/brain.webp";
+import blendericon from "../../assets/about assets/blender.webp";
+import jobready from "../../assets/about assets/jobready.webp";
 
 function About() {
-
   const details = [
     {
       id: 1,
@@ -24,7 +23,6 @@ function About() {
       text: "Frontend Dev",
       description: "Architecting production-quality web applications."
     },
-
     {
       id: 4,
       img: jobready,
@@ -34,23 +32,27 @@ function About() {
   ];
 
   return (
-   
-    <div className="w-full bg-black"> 
+    <div className="w-full bg-black relative overflow-hidden">  
       
-      <div className="w-full max-w-360 h-auto mx-auto px-fluid-x flex flex-col py-10 md:py-15 gap-16">
+      <div 
+        className="absolute top-37 right-13 w-[500px] md:w-[650px] h-[500px] md:h-[650px] pointer-events-none z-0 translate-x-1/3 -translate-y-1/4 opacity-100"
+        style={{
+          background: "radial-gradient(circle, rgba(168,85,247,0.35) 0%, rgba(126,34,206,0.15) 45%, rgba(0,0,0,0) 70%)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      <div className="w-full max-w-360 h-auto mx-auto px-fluid-x flex flex-col py-10 md:py-15 gap-16 relative z-10">
         
-      
         <div className="w-full max-w-3xl flex flex-col gap-6">
           <h2 className="text-display-6 md:text-display-9 font-bold text-white font-clash">The Journey</h2>
           <p className="text-gray-300 text-display-4 md:text-display-5 leading-relaxed font-poppins">
             Over the past ten months of full-time study, I have transitioned from mastering HTML, CSS, and JavaScript fundamentals to architecting production-quality frontend applications using React.js. I specialize in building highly responsive, visually engaging user interfaces that bridge the gap between design and engineering.
           </p>
-  
         </div>
 
         <div className="relative w-full pt-8">
           
-    
           <div className="hidden md:block absolute top-[4rem] left-[10%] right-[10%] h-[2px] bg-purple-600/40 z-0"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-4 relative z-10">
@@ -65,7 +67,6 @@ function About() {
                   />
                 </div>
 
-             
                 <div className="flex flex-col gap-2 px-2">
                   <h3 className="text-display-5 font-bold text-white tracking-wide font-clash">{item.text}</h3>
                   <p className="text-display-4 text-gray-400">{item.description}</p>
