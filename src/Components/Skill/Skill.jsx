@@ -27,7 +27,7 @@ function Skill() {
   ];
 
   return (
-    <div className="w-full bg-black">
+    <div className="w-full bg-black relative overflow-hidden">
       <style>{`
         @keyframes spin-border {
           0% { transform: rotate(0deg); }
@@ -38,7 +38,15 @@ function Skill() {
         }
       `}</style>
 
-      <div className="w-full max-w-360 h-auto px-fluid-x mx-auto py-10 md:py-15">
+      <div 
+        className="absolute top-35 left-13 w-[500px] md:w-[600px] h-[500px] md:h-[600px] pointer-events-none z-0 -translate-x-1/3 -translate-y-1/4 opacity-100"
+        style={{
+          background: "radial-gradient(circle, rgba(168,85,247,0.35) 0%, rgba(126,34,206,0.15) 45%, rgba(0,0,0,0) 60%)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      <div className="w-full max-w-360 h-auto px-fluid-x mx-auto py-10 md:py-15 relative z-10">
         <div className="w-full h-auto flex flex-col gap-10">
           
           <div className="w-full h-auto flex gap-8">
@@ -83,7 +91,7 @@ function Skill() {
                   />
 
                   <div className="relative z-10 w-full flex flex-col items-center gap-2">
-              
+                
                     <div 
                       className="w-18 h-18 rounded-full flex items-center justify-center p-2.5 backdrop-blur-md transition-all duration-300 group-hover:scale-110"
                       style={{
