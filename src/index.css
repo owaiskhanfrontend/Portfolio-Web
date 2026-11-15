@@ -5,7 +5,7 @@
 @theme {
 
   --spacing-fluid-x: clamp(16px, -6.535px + 6.01vw, 80px);
-  --spacing-fluid-y: clamp(48px, 36.732px + 3vw, 80px);
+
 
 
   --font-poppins: 'Poppins', sans-serif;

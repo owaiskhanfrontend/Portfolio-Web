@@ -4,7 +4,7 @@ import Background from "../../assets/Home assets/Background_001.png";
 function Home() {
   return (
     <div 
-      className="w-full min-h-screen bg-cover bg-center flex overflow-hidden relative"
+      className="w-full h-auto bg-cover bg-center flex overflow-hidden relative"
       style={{ backgroundImage: `url(${Background})` }}
     >
       <Hero />

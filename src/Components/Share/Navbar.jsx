@@ -114,7 +114,7 @@ function Navbar() {
 
             <button 
               onClick={handleLinkedInClick}
-              className="hidden lg:flex py-2 px-8 rounded-full font-medium items-center justify-center gap-3 text-lg cursor-pointer bg-white text-black border-black shadow-[inset_0_6px_12px_rgba(0,0,0,0.15),_0_2px_4px_rgba(0,0,0,0.05)] hover:bg-neutral-50 hover:brightness-95 active:scale-95 transition-all"
+              className="hidden lg:flex py-2 px-8 rounded-full font-clash font-medium items-center justify-center gap-3 text-lg cursor-pointer bg-white text-black border-black shadow-[inset_0_6px_12px_rgba(0,0,0,0.15),_0_2px_4px_rgba(0,0,0,0.05)] hover:bg-neutral-50 hover:brightness-95 active:scale-95 transition-all"
             >
               View linkedin
             </button>
@@ -136,7 +136,7 @@ function Navbar() {
           
           <button 
             onClick={handleLinkedInClick}
-            className="mt-2 py-3 w-full rounded-full font-medium flex items-center justify-center bg-white text-black text-lg cursor-pointer hover:bg-neutral-200 active:scale-95 transition-transform"
+            className="mt-2 py-3 w-full rounded-full font-clash font-medium flex items-center justify-center bg-white text-black text-lg cursor-pointer hover:bg-neutral-200 active:scale-95 transition-transform"
           >
             View linkedin
           </button>

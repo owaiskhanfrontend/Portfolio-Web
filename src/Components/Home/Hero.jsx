@@ -14,7 +14,7 @@ function Hero() {
   const sceneScale = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-[1440px] min-h-screen px-fluid-x mx-auto pb-20">
+    <div ref={containerRef} className="relative w-full max-w-[1440px] h-auto px-fluid-x mx-auto pb-20">
       
       <div className="absolute inset-0 w-full h-full flex justify-center items-center pointer-events-none opacity-40 z-0">
         <img 
