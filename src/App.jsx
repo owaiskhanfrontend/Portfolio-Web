@@ -16,6 +16,7 @@ function App() {
         <section id="Home">
           <Home />
         </section>
+        
         <section id="About">
           <About />
         </section>

@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import isometriclayer from "../../assets/Home assets/hero_bg.webp";
 import rockscene from "../../assets/Home assets/rockscene.webp";
 
-
 function Hero() {
   const containerRef = useRef(null);
 
@@ -41,8 +40,9 @@ function Hero() {
         </div>
 
         <p className="text-lg md:text-xl max-w-3xl mx-auto text-center font-poppins font-normal text-white/60 leading-relaxed">
-          Fusing production-grade React architecture, robust state management, and seamless REST API integrations with interactive 3D assets to build web apps that are as powerful as they are visually striking.
+          Fusing production-grade React architecture, robust state management, Figma to Code, and seamless REST API integrations with interactive 3D assets to build web apps that are as powerful as they are visually striking.
         </p>
+
         <div className="w-full max-w-4xl mx-auto flex items-center justify-center relative pt-5 md:pt-7 px-4">
           <motion.div 
             style={{ scale: sceneScale }}
