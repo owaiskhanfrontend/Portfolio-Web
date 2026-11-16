@@ -65,6 +65,22 @@ function Projects() {
   const projectsList = [
     {
       id: 1,
+      title: "Weather Dashboard",
+      tagline: "Featured Project",
+      description:
+        "Zero-framework responsive weather dashboard application built using vanilla JavaScript ES6 modules, Open-Meteo API, and browser Geolocation API for real-time climate tracking.",
+      techStack: [
+        { name: "JavaScript", img: JSblender, color: "#F7DF1E" },
+        { name: "HTML5", img: htmlblender, color: "#E34F26" },
+        { name: "CSS3", img: cssblender, color: "#33a9dc" },
+        { name: "Figma", img: figmaicon, color: "#F24E1E" },
+      ],
+      image: pcui2,
+      liveUrl: "https://owaiskhan-weather-dashboard.netlify.app",
+      githubUrl: "https://github.com/owaiskhanfrontend/Weather-Dashboard",
+    },
+    {
+      id: 2,
       title: "Moon E-Commerce",
       tagline: "Featured Project",
       description:
@@ -83,22 +99,6 @@ function Projects() {
       githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
     },
     {
-      id: 2,
-      title: "Weather Dashboard",
-      tagline: "Featured Project",
-      description:
-        "Zero-framework responsive weather dashboard application built using vanilla JavaScript ES6 modules, Open-Meteo API, and browser Geolocation API for real-time climate tracking.",
-      techStack: [
-        { name: "JavaScript", img: JSblender, color: "#F7DF1E" },
-        { name: "HTML5", img: htmlblender, color: "#E34F26" },
-        { name: "CSS3", img: cssblender, color: "#33a9dc" },
-        { name: "Figma", img: figmaicon, color: "#F24E1E" },
-      ],
-      image: pcui2,
-      liveUrl: "https://owaiskhan-weather-dashboard.netlify.app",
-      githubUrl: "https://github.com/owaiskhanfrontend/Weather-Dashboard",
-    },
-    {
       id: 3,
       title: "Portfolio Web",
       tagline: "Featured Project",
@@ -111,8 +111,7 @@ function Projects() {
         { name: "Figma", img: figmaicon, color: "#F24E1E" },
       ],
       image: pcui3,
-      liveUrl: "https://owaiskhanfrontend.netlify.app",
-      githubUrl: "https://github.com/owaiskhanfrontend/Portfolio",
+      githubUrl: "https://github.com/owaiskhanfrontend/Portfolio-Web",
     },
   ];
 
@@ -129,8 +128,6 @@ function Projects() {
               Real Proof of <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">Skill</span>.
             </h2>
           </div>
-
-          
 
           <div 
             ref={containerRef} 

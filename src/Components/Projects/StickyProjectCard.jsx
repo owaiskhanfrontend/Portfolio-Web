@@ -4,9 +4,19 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
   const isEven = index % 2 === 1;
   const stickyOffsets = ["top-20", "top-32", "top-44"];
 
+  const imageContent = (
+    <div className="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full bg-black">
+      <img 
+        src={project.image} 
+        alt={project.title} 
+        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-500 ease-out"
+      />
+    </div>
+  );
+
   return (
     <div 
-      className={`sticky ${stickyOffsets[index] || "top-44"} w-full transition-all duration-300 `}
+      className={`sticky ${stickyOffsets[index] || "top-44"} w-full transition-all duration-300`}
       style={{ zIndex: index + 1 }}
     >
       <div className={`w-full bg-[#0a0a0a] backdrop-blur-2xl border border-white/15 rounded-3xl p-6 md:p-12 shadow-[0_-30px_60px_rgba(0,0,0,0.95)] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ${isEven ? "lg:flex-row-reverse" : ""}`}>
@@ -60,17 +70,19 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
           </div>
 
           <div className="flex items-center gap-6 mt-6 pl-2">
-            <a 
-              href={project.liveUrl} 
-              target="_blank" 
-              rel="noreferrer"
-              className="font-poppins text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-display-2 group"
-            >
-              <span>Live Preview</span>
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            {project.liveUrl && (
+              <a 
+                href={project.liveUrl} 
+                target="_blank" 
+                rel="noreferrer"
+                className="font-poppins text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-display-2 group"
+              >
+                <span>Live Preview</span>
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            )}
 
             <a 
               href={project.githubUrl} 
@@ -87,14 +99,20 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
         </div>
 
         <div className="w-full lg:w-7/12 relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-[#3a3845]/100 to-[#3a3845]/100 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
-          <div className="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full bg-black">
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-500 ease-out"
-            />
-          </div>
+          <div className="absolute rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
+          {project.liveUrl ? (
+            <a 
+              href={project.liveUrl} 
+              target="_blank" 
+              rel="noreferrer"
+              className="block cursor-pointer"
+              title="Click to view Live Preview"
+            >
+              {imageContent}
+            </a>
+          ) : (
+            imageContent
+          )}
         </div>
 
       </div>
