@@ -78,7 +78,7 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
             </p>
           </div>
 
-          <div className="flex items-center gap-6 mt-6 pl-2">
+          <div className="flex flex-wrap items-center gap-5 mt-6 pl-2">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -118,6 +118,30 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
                 />
               </div>
             </a>
+
+            {project.figmaUrl && (
+              <a
+                href={project.figmaUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="font-poppins text-gray-300 hover:text-[#F24E1E] transition-colors flex items-center gap-2 font-medium text-display-2 group"
+              >
+                <span>View Figma Design</span>
+                <svg
+                  className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            )}
           </div>
         </div>
 

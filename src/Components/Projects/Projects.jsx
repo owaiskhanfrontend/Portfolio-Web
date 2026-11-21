@@ -5,9 +5,9 @@ import project1 from "../../assets/Projects assets/weather dashboard.png";
 import project2 from "../../assets/Projects assets/moon e commerce.png";
 import project3 from "../../assets/Projects assets/portfolio web.png";
 
-import pcui from "../../assets/Projects assets/pc ui card-1.png";
-import pcui2 from "../../assets/Projects assets/pc ui card-2.png";
-import pcui3 from "../../assets/Projects assets/pc ui card-3.png";
+import pcui from "../../assets/Projects assets/pc ui card-1.jpg";
+import pcui2 from "../../assets/Projects assets/pc ui card-2.jpg";
+import pcui3 from "../../assets/Projects assets/pc ui card-3.jpg";
 
 import figmaicon from "../../assets/skill assets/figmablender.webp";
 import reactblender from "../../assets/skill assets/reactblender.webp";
@@ -78,6 +78,8 @@ function Projects() {
       image: pcui2,
       liveUrl: "https://owaiskhan-weather-dashboard.netlify.app",
       githubUrl: "https://github.com/owaiskhanfrontend/Weather-Dashboard",
+      figmaUrl:
+        "https://www.figma.com/design/jPmWHmeF2DlfbylbU4t7lr/Weather-Dashboard--Community-?node-id=0-1",
     },
     {
       id: 2,
@@ -97,6 +99,8 @@ function Projects() {
       image: pcui,
       liveUrl: "https://owaiskhan-moon-e-commerce.netlify.app",
       githubUrl: "https://github.com/owaiskhanfrontend/Moon-E-Commerce",
+      figmaUrl:
+        "https://www.figma.com/design/OA5JQHlCktJlOEFDCD6mou/Moon-Ceramic---Furniture-Store-ECommerce-Website-Shop--Community-?node-id=0-1",
     },
     {
       id: 3,

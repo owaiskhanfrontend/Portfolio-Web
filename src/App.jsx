@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="bg-black">
         <section id="Home">
           <Home />
         </section>

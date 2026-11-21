@@ -23,12 +23,16 @@ const MOON_ECOMMERCE_LESSONS = [
 
 const MOON_ECOMMERCE_MISTAKES = [
   {
+    title: "ASSET WEIGHT AUDITING",
+    desc: "Carried forward asset size lessons learned from previous builds—modeling 3D assets in Blender and rendering them out in KB-optimized sizes so everything stayed lightweight and web-optimized.",
+  },
+  {
     title: "LATE GIT PUSHES BEFORE DEPLOYMENT",
     desc: "Held off on pushing progress and ended up pushing the bulk of the codebase right around Netlify deployment instead of committing incrementally—a habit I corrected with consistent pushes on this portfolio.",
   },
-  {
-    title: "ASSET WEIGHT AUDITING",
-    desc: "Carried forward asset size lessons learned from previous builds to ensure 3D models and textures remained lightweight and web-optimized.",
+ {
+    title: "ARBITRARY TAILWIND BRACKETS & TOOLING WARNINGS",
+    desc: "Transitioning from raw CSS to Tailwind initially led to overusing custom units inside [] brackets across sizing, spacing, and layout. Catching those warnings in my tooling and build output taught me when to rely on fluid spacing, natural content flow, and built-in scale tokens instead.",
   },
 ];
 
@@ -63,6 +67,10 @@ const WEATHER_DASHBOARD_MISTAKES = [
   {
     title: "PUSHING ALL AT ONCE AT DEPLOYMENT",
     desc: "Even knowing I would deploy to Netlify, I waited and pushed almost everything at once near deployment rather than pushing small checkpoints throughout development.",
+  },
+  {
+    title: "VIEWPORT HEIGHT & MOBILE SCROLL OVERFLOW",
+    desc: "Locked the body to a fixed viewport height (100vh), which left excess empty background space below the weather grid on tall screens and exposed raw white body overflow while scrolling on mobile before reaching the final cards.",
   },
 ];
 
@@ -154,7 +162,7 @@ function LessonsOverview() {
 
           <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-4">
             <h4 className="font-clash text-xs md:text-sm font-bold tracking-widest text-gray-400 uppercase">
-            Mistakes & Key Takeaways
+              Mistakes & Key Takeaways
             </h4>
             <div className="flex flex-col gap-5">
               {WEATHER_DASHBOARD_MISTAKES.map((item) => (

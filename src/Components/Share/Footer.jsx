@@ -1,4 +1,4 @@
-import logo from "../../assets/navbar assets/Group.svg";
+import logo from "../../assets/navbar assets/logo.svg";
 
 function Footer() {
   const scrollToSection = (sectionId) => {
