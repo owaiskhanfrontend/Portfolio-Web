@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import isometriclayer from "../../assets/Home assets/hero_bg.webp";
-import rockscene from "../../assets/Home assets/rockscene.webp";
+import rockscene from "../../assets/Home assets/final2.webp";
 
 function Hero() {
   const containerRef = useRef(null);
