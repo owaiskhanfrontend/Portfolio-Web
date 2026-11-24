@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/navbar assets/logo.svg";
+import logo from "../../assets/navbar assets/icon.svg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,7 +75,7 @@ function Navbar() {
               className="flex items-center gap-3 cursor-pointer" 
               onClick={() => scrollToSection("Home")}
             >
-              <div className="w-8 md:w-10 flex justify-center items-center brightness-0 invert">
+              <div className="w-8 md:w-10 flex justify-center items-center">
                 <img src={logo} alt="logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-display-5 md:text-display-6 text-white font-bold font-clash">Personal</span>

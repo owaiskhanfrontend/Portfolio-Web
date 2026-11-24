@@ -1,4 +1,4 @@
-import logo from "../../assets/navbar assets/logo.svg";
+import logo from "../../assets/navbar assets/icon.svg";
 
 function Footer() {
   const scrollToSection = (sectionId) => {
@@ -40,7 +40,7 @@ function Footer() {
           <div className="w-full lg:w-[40%] flex flex-col items-start gap-6 border-b border-white/20 lg:border-b-0 lg:border-r pb-10 lg:pb-0 lg:pr-15 mb-10 lg:mb-0">
             
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("Home")}>
-              <img src={logo} alt="Portfolio Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+              <img src={logo} alt="Portfolio Logo" className="w-10 h-10 object-contain" />
               <span className="font-poppins font-bold text-xl tracking-wider text-white">Owais Khan</span>
             </div>
 
