@@ -8,6 +8,7 @@ import project3 from "../../assets/Projects assets/portfolio web.png";
 import pcui from "../../assets/Projects assets/pc ui card-1.jpg";
 import pcui2 from "../../assets/Projects assets/pc ui card-2.jpg";
 import pcui3 from "../../assets/Projects assets/pc ui card-3.jpg";
+import Carrender from "../../assets/Projects assets/car render.jpg";
 
 import figmaicon from "../../assets/skill assets/figmablender.webp";
 import reactblender from "../../assets/skill assets/reactblender.webp";
@@ -117,6 +118,17 @@ function Projects() {
       image: pcui3,
       githubUrl: "https://github.com/owaiskhanfrontend/Portfolio-Web",
     },
+    {
+      id: 4,
+      title: "High-End 3D Visualizations",
+      tagline: "Featured Project",
+      description:
+        "Backed by one year of intensive experience in Blender 3D, I create photorealistic 3D models, custom product mockups, and high-end studio renders. Capable of designing and staging any custom 3D mockup or scene from concept to final render—focused on clean geometry, advanced material shaders (glass, matte paint, brushed metals), and precise studio lighting to achieve commercial-grade product visualizations.",
+      techStack: [
+        { name: "Blender 3D", img: blendericon, color: "#F5792A" },
+      ],
+      image: Carrender,
+    },
   ];
 
   return (
@@ -186,13 +198,13 @@ function Projects() {
 
           <div className="w-full flex flex-col relative mt-12 space-y-12">
             {projectsList.map((project, index) => (
-              <StickyProjectCard 
-                key={project.id}
-                project={project}
-                index={index}
-                hoveredTechIndex={hoveredTechIndex}
-                setHoveredTechIndex={setHoveredTechIndex}
-              />
+            <StickyProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+            hoveredTechIndex={hoveredTechIndex}
+            setHoveredTechIndex={setHoveredTechIndex}
+            />
             ))}
           </div>
 

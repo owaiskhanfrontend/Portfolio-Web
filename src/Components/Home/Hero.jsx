@@ -11,20 +11,20 @@ function Hero() {
     offset: ["start start", "end center"]
   });
 
-  const sceneScale = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
+  const sceneScale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-[1440px] h-auto px-fluid-x mx-auto pb-20">
+    <div ref={containerRef} className="relative w-full max-w-[1440px] xl:max-w-[1600px] h-auto px-fluid-x mx-auto pb-20">
       
-      <div className="absolute inset-0 w-full h-full flex justify-center items-center pointer-events-none opacity-40 z-0">
+      <div className="hidden md:flex absolute inset-0 w-full h-full justify-center items-center pointer-events-none z-0">
         <img 
           src={isometriclayer} 
           alt="Isometric Background" 
-          className="w-full h-full object-contain md:object-cover mix-blend-screen" 
+          className="md:w-[82%] md:h-[82%] lg:w-[92%] lg:h-[92%] xl:w-full xl:h-full object-contain lg:opacity-100 mix-blend-screen transition-all duration-300" 
         />
       </div>
 
-      <div className="relative z-10 w-full flex flex-col items-center gap-6 pt-24 md:pt-32">
+      <div className="relative z-10 w-full flex flex-col items-center gap-6 pt-26 md:pt-34">
         
         <div className="w-full flex flex-col items-center gap-3 text-center">
           <span className="text-display-4 font-poppins font-medium text-white/70 tracking-wide">
@@ -43,7 +43,7 @@ function Hero() {
           Fusing production-grade React architecture, robust state management, Figma to Code, and seamless REST API integrations with interactive 3D assets to build web apps that are as powerful as they are visually striking.
         </p>
 
-        <div className="w-full max-w-4xl mx-auto flex items-center justify-center relative pt-5 md:pt-7 px-4">
+        <div className="w-full max-w-3xl mx-auto flex items-center justify-center relative pt-5 md:pt-7 px-4">
           <motion.div 
             style={{ scale: sceneScale }}
             animate={{ y: [0, -12, 0] }}

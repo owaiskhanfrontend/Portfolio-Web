@@ -2,7 +2,15 @@ import githublender from "../../assets/skill assets/githublender.webp";
 
 function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechIndex }) {
   const isEven = index % 2 === 1;
-  const stickyOffsets = ["top-20", "top-32", "top-44"];
+
+  const stickyOffsets = [
+    "top-16 md:top-20",
+    "top-12 md:top-28",
+    "top-24 md:top-36",
+    "top-8 md:top-12",
+  ];
+
+  const cardStickyClass = stickyOffsets[index] || "top-24 md:top-36";
 
   const imageContent = (
     <div className="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full bg-black">
@@ -14,9 +22,11 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
     </div>
   );
 
+  const hasLinks = Boolean(project.liveUrl || project.githubUrl || project.figmaUrl);
+
   return (
     <div
-      className={`sticky ${stickyOffsets[index] || "top-44"} w-full transition-all duration-300`}
+      className={`sticky ${cardStickyClass} w-full`}
       style={{ zIndex: index + 1 }}
     >
       <div
@@ -78,71 +88,75 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-5 mt-6 pl-2">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="font-poppins text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-display-2 group"
-              >
-                <span>Live Preview</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          {hasLinks && (
+            <div className="flex flex-wrap items-center gap-5 mt-6 pl-2">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-poppins text-white hover:text-[#6eeb2c] transition-colors flex items-center gap-2 font-medium text-display-2 group"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            )}
+                  <span>Live Preview</span>
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              )}
 
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="font-poppins text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium text-display-2 group"
-            >
-              <span>GitHub Repo</span>
-              <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0.5 transition-transform group-hover:scale-110">
-                <img
-                  src={githublender}
-                  alt="github-icon"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </a>
-
-            {project.figmaUrl && (
-              <a
-                href={project.figmaUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="font-poppins text-gray-300 hover:text-[#F24E1E] transition-colors flex items-center gap-2 font-medium text-display-2 group"
-              >
-                <span>View Figma Design</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-poppins text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium text-display-2 group"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            )}
-          </div>
+                  <span>GitHub Repo</span>
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-0.5 transition-transform group-hover:scale-110">
+                    <img
+                      src={githublender}
+                      alt="github-icon"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </a>
+              )}
+
+              {project.figmaUrl && (
+                <a
+                  href={project.figmaUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-poppins text-gray-300 hover:text-[#F24E1E] transition-colors flex items-center gap-2 font-medium text-display-2 group"
+                >
+                  <span>View Figma Design</span>
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="w-full xl:w-7/12 relative group">
