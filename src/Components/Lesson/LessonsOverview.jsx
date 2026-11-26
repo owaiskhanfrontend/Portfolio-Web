@@ -30,7 +30,7 @@ const MOON_ECOMMERCE_MISTAKES = [
     title: "LATE GIT PUSHES BEFORE DEPLOYMENT",
     desc: "Held off on pushing progress and ended up pushing the bulk of the codebase right around Netlify deployment instead of committing incrementally—a habit I corrected with consistent pushes on this portfolio.",
   },
- {
+  {
     title: "ARBITRARY TAILWIND BRACKETS & TOOLING WARNINGS",
     desc: "Transitioning from raw CSS to Tailwind initially led to overusing custom units inside [] brackets across sizing, spacing, and layout. Catching those warnings in my tooling and build output taught me when to rely on fluid spacing, natural content flow, and built-in scale tokens instead.",
   },

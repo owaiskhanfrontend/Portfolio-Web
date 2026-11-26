@@ -1,28 +1,37 @@
 import githublender from "../../assets/skill assets/githublender.webp";
 
-function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechIndex }) {
+function StickyProjectCard({
+  project,
+  index,
+  hoveredTechIndex,
+  setHoveredTechIndex,
+}) {
   const isEven = index % 2 === 1;
 
   const stickyOffsets = [
     "top-16 md:top-20",
-    "top-12 md:top-28",
-    "top-24 md:top-36",
-    "top-8 md:top-12",
+    "top-20 md:top-26",
+    "top-24 md:top-32",
+    "top-28 md:top-38",
   ];
 
-  const cardStickyClass = stickyOffsets[index] || "top-24 md:top-36";
+  const cardStickyClass = stickyOffsets[index] || "top-24 md:top-32";
 
   const imageContent = (
     <div className="relative border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full bg-black">
       <img
         src={project.image}
         alt={project.title}
+        loading="lazy"
+        decoding="async"
         className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-500 ease-out"
       />
     </div>
   );
 
-  const hasLinks = Boolean(project.liveUrl || project.githubUrl || project.figmaUrl);
+  const hasLinks = Boolean(
+    project.liveUrl || project.githubUrl || project.figmaUrl
+  );
 
   return (
     <div
@@ -54,7 +63,7 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
                   const isHovered = hoveredTechIndex === globalIdx;
                   return (
                     <div
-                      key={idx}
+                      key={tech.name}
                       onMouseEnter={() => setHoveredTechIndex(globalIdx)}
                       onMouseLeave={() => setHoveredTechIndex(null)}
                       title={tech.name}
@@ -75,6 +84,8 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
                       <img
                         src={tech.img}
                         alt={tech.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain filter drop-shadow-md"
                       />
                     </div>
@@ -126,6 +137,8 @@ function StickyProjectCard({ project, index, hoveredTechIndex, setHoveredTechInd
                     <img
                       src={githublender}
                       alt="github-icon"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain"
                     />
                   </div>

@@ -2,7 +2,7 @@ import LessonsOverview from "./LessonsOverview";
 
 function Lessons() {
   return (
-    <section id="lessons" className="w-full bg-black">
+    <section id="Lessons" className="w-full bg-black">
       <div className="w-full max-w-360 px-4 md:px-8 mx-auto py-12 md:py-20 flex flex-col gap-10">
         <div className="w-full flex flex-col items-center text-center gap-3 mx-auto">
           <h2 className="text-display-6 md:text-display-9 font-medium text-white font-clash">

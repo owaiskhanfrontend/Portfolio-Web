@@ -10,13 +10,13 @@ import Footer from "./Components/Share/Footer";
 
 function App() {
   return (
-    <>
+    <div className="bg-black">
       <Navbar />
-      <main className="bg-black">
+      <main>
         <section id="Home">
           <Home />
         </section>
-        
+
         <section id="About">
           <About />
         </section>
@@ -36,12 +36,9 @@ function App() {
         <section id="Contact">
           <Contact />
         </section>
-
-        <section id="Footer">
-          <Footer />
-        </section>
       </main>
-    </>
+      <Footer />
+    </div>
   );
 }
 

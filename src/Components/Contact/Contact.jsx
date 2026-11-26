@@ -94,8 +94,13 @@ function Contact() {
   const leftHandX = useTransform(scrollYProgress, [0, 1], left);
   const rightHandX = useTransform(scrollYProgress, [0, 1], right);
 
-  const glowScale = useTransform(scrollYProgress, [0, 1], [0.8, 1.1]);
-  const glowOpacity = useTransform(scrollYProgress, [0, 1], [0.3, 0.75]);
+  const glowScaleRange =
+    screenTier === "mobile" ? [0.85, 1.15] : [0.8, 1.1];
+  const glowOpacityRange =
+    screenTier === "mobile" ? [0.34, 0.8] : [0.3, 0.75];
+
+  const glowScale = useTransform(scrollYProgress, [0, 1], glowScaleRange);
+  const glowOpacity = useTransform(scrollYProgress, [0, 1], glowOpacityRange);
 
   return (
     <div
@@ -122,7 +127,9 @@ function Contact() {
           <img
             src={human_hand}
             alt="Human Hand"
-            className="w-full h-auto object-contain drop-shadow-[0_0_25px_rgba(168,85,247,0.35)]"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 
@@ -133,7 +140,9 @@ function Contact() {
           <img
             src={robo_hand}
             alt="Robo Hand"
-            className="w-full h-auto object-contain drop-shadow-[0_0_25px_rgba(168,85,247,0.35)]"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 
@@ -141,8 +150,8 @@ function Contact() {
           style={{ scale: glowScale, opacity: glowOpacity }}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10"
         >
-          <div className="absolute w-20 h-20 sm:w-36 sm:h-36 md:w-48 md:h-48 bg-purple-500/40 rounded-full blur-2xl" />
-          <div className="w-36 h-36 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-600/25 blur-[70px] rounded-full" />
+          <div className="absolute w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 bg-purple-500/40 rounded-full blur-2xl" />
+          <div className="w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-600/25 blur-[70px] rounded-full" />
         </motion.div>
       </div>
 
@@ -150,9 +159,9 @@ function Contact() {
         <div className="w-full bg-[#0a0a0a]/90 border border-[#222222] rounded-2xl p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center text-center shadow-[0_0_35px_rgba(168,85,247,0.15)] relative overflow-hidden backdrop-blur-md">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-purple-500/70 to-transparent"></div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-display-1 sm:text-display-2 font-poppins font-medium mb-4">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Available for Full-Time Job Roles & Freelance Projects
+          <div className="inline-flex items-center justify-center gap-2.5 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-display-1 sm:text-display-2 font-poppins font-medium mb-4">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span>Available for Full-Time Job Roles & Freelance Projects</span>
           </div>
 
           <h3 className="text-display-6 sm:text-display-7 font-bold text-white font-clash mb-2 tracking-wide">
@@ -167,6 +176,7 @@ function Contact() {
               {email}
             </span>
             <button
+              type="button"
               onClick={handleCopyEmail}
               className="w-full sm:w-auto shrink-0 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 font-poppins text-white text-display-2 font-medium transition-colors cursor-pointer"
             >

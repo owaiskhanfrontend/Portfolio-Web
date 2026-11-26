@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/navbar assets/icon.svg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,14 +8,14 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsVisible(false);
         setIsMenuOpen(false);
       } else {
         setIsVisible(true);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -30,8 +29,8 @@ function Navbar() {
       const targetPosition = section.getBoundingClientRect().top + window.scrollY;
       const startPosition = window.scrollY;
       const distance = targetPosition - startPosition;
-      
-      const duration = 600; 
+
+      const duration = 600;
       let start = null;
 
       const animation = (currentTime) => {
@@ -39,9 +38,10 @@ function Navbar() {
         const timeElapsed = currentTime - start;
         const progress = Math.min(timeElapsed / duration, 1);
 
-        const easeInOutCubic = progress < 0.5 
-          ? 4 * progress * progress * progress 
-          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        const easeInOutCubic =
+          progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
 
         window.scrollTo(0, startPosition + distance * easeInOutCubic);
 
@@ -52,41 +52,66 @@ function Navbar() {
 
       requestAnimationFrame(animation);
     }
-    
-    setIsMenuOpen(false); 
-  };
 
-  const handleLinkedInClick = () => {
-    window.open("https://www.linkedin.com/in/owais-khan-ab3ab2436/", "_blank", "noopener,noreferrer");
     setIsMenuOpen(false);
   };
 
+  const handleLinkedInClick = () => {
+    window.open(
+      "https://www.linkedin.com/in/owais-khan-ab3ab2436/",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    setIsMenuOpen(false);
+  };
+
+  const navItems = [
+    { label: "About Me", target: "About" },
+    { label: "Skills", target: "Skill" },
+    { label: "Projects", target: "Projects" },
+    { label: "Lessons", target: "Lessons" },
+    { label: "Contact me", target: "Contact" },
+  ];
+
   return (
     <>
-      <header 
-        className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      <header
+        className={`fixed top-0 inset-x-0 z-50 backdrop-blur-md transition-transform duration-300 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <nav className="w-full h-20 md:h-26 flex items-center px-fluid-x relative">
           <div className="w-full h-16 flex justify-between items-center md:px-0">
-            
-            <div 
-              className="flex items-center gap-3 cursor-pointer" 
+            <div
+              className="flex items-center gap-3 cursor-pointer"
               onClick={() => scrollToSection("Home")}
             >
               <div className="w-8 md:w-10 flex justify-center items-center">
-                <img src={logo} alt="logo" className="w-full h-full object-contain" />
+                <img
+                  src="/icon.svg"
+                  alt="logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-display-5 md:text-display-6 text-white font-bold font-clash">Personal</span>
+              <span className="text-display-5 md:text-display-6 text-white font-bold font-clash">
+                Personal
+              </span>
             </div>
 
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="flex lg:hidden text-white hover:text-white/70 transition-colors p-2 z-50 relative cursor-pointer"
               aria-label="Toggle Menu"
             >
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
                 {isMenuOpen ? (
                   <>
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -104,15 +129,19 @@ function Navbar() {
 
             <div className="hidden lg:flex items-center bg-white/4 border border-white/8 px-8 py-2.5 rounded-full backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300 hover:border-white/12 hover:bg-white/6">
               <div className="flex items-center gap-9">
-                <div onClick={() => scrollToSection("About")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">About Me</div>
-                <div onClick={() => scrollToSection("Skill")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">Skills</div>
-                <div onClick={() => scrollToSection("Projects")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">Projects</div>
-                <div onClick={() => scrollToSection("Lessons")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">Lessons</div>
-                <div onClick={() => scrollToSection("Contact")} className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer">Contact me</div>
+                {navItems.map((item) => (
+                  <div
+                    key={item.target}
+                    onClick={() => scrollToSection(item.target)}
+                    className="font-clash text-display-3 font-medium tracking-wide text-white/50 hover:text-white/90 py-1 transition-colors duration-200 cursor-pointer"
+                  >
+                    {item.label}
+                  </div>
+                ))}
               </div>
             </div>
 
-            <button 
+            <button
               onClick={handleLinkedInClick}
               className="hidden lg:flex py-2 px-8 rounded-full font-clash font-medium items-center justify-center gap-3 text-lg cursor-pointer bg-white text-black border-black shadow-[inset_0_6px_12px_rgba(0,0,0,0.15),_0_2px_4px_rgba(0,0,0,0.05)] hover:bg-neutral-50 hover:brightness-95 active:scale-95 transition-all"
             >
@@ -122,21 +151,48 @@ function Navbar() {
         </nav>
       </header>
 
-      <div 
-        className={`fixed inset-x-0 top-20 px-fluid-x transition-all duration-300 ease-in-out lg:hidden z-40 ${
-          isMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
+      <div
+        onClick={() => setIsMenuOpen(false)}
+        className={`fixed inset-0 bg-black/35 backdrop-blur-[2px] transition-opacity duration-300 lg:hidden z-30 ${
+          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
+      <div
+        className={`fixed inset-x-0 top-24 px-fluid-x will-change-[transform,opacity] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden z-40 ${
+          isMenuOpen
+            ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+            : "opacity-0 -translate-y-3 scale-[0.98] pointer-events-none"
         }`}
       >
-        <div className="w-full bg-[#0a0a0a]/95 border border-white/10 rounded-2xl backdrop-blur-2xl shadow-[0_16px_40px_rgba(0,0,0,0.8)] flex flex-col p-6 gap-5 text-white font-clash">
-          <div onClick={() => scrollToSection("About")} className="text-display-3 font-medium text-white/70 hover:text-white cursor-pointer transition-colors py-1">About Me</div>
-          <div onClick={() => scrollToSection("Skill")} className="text-display-3 font-medium text-white/70 hover:text-white cursor-pointer transition-colors py-1">Skills</div>
-          <div onClick={() => scrollToSection("Projects")} className="text-display-3 font-medium text-white/70 hover:text-white cursor-pointer transition-colors py-1">Projects</div>
-          <div onClick={() => scrollToSection("Lessons")} className="text-display-3 font-medium text-white/70 hover:text-white cursor-pointer transition-colors py-1">Lessons</div>
-          <div onClick={() => scrollToSection("Contact")} className="text-display-3 font-medium text-white/70 hover:text-white cursor-pointer transition-colors py-1">Contact me</div>
-          
-          <button 
+        <div className="w-full bg-black/75 border border-white/12 rounded-2xl backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.65)] flex flex-col p-6 gap-5 text-white font-clash">
+          {navItems.map((item, index) => (
+            <div
+              key={item.target}
+              onClick={() => scrollToSection(item.target)}
+              style={{
+                transitionDelay: isMenuOpen ? `${index * 35 + 40}ms` : "0ms",
+              }}
+              className={`text-display-3 font-medium text-white/80 hover:text-white cursor-pointer py-1 transition-all duration-300 ease-out ${
+                isMenuOpen
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-2"
+              }`}
+            >
+              {item.label}
+            </div>
+          ))}
+
+          <button
             onClick={handleLinkedInClick}
-            className="mt-2 py-3 w-full rounded-full font-clash font-medium flex items-center justify-center bg-white text-black text-lg cursor-pointer hover:bg-neutral-200 active:scale-95 transition-transform"
+            style={{
+              transitionDelay: isMenuOpen ? `${navItems.length * 35 + 60}ms` : "0ms",
+            }}
+            className={`mt-2 py-3 w-full rounded-full font-clash font-medium flex items-center justify-center bg-white text-black text-lg cursor-pointer hover:bg-neutral-200 active:scale-95 transition-all duration-300 ease-out ${
+              isMenuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-2"
+            }`}
           >
             View linkedin
           </button>

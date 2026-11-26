@@ -87,7 +87,7 @@ function Projects() {
       title: "Moon E-Commerce",
       tagline: "Featured Project",
       description:
-        "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON APIs.",
+        "Full-featured React 19 e-commerce web application featuring custom 3D visual assets rendered in Blender, state management via Context API, and integration with dynamic DummyJSON product APIs.",
       techStack: [
         { name: "Figma", img: figmaicon, color: "#F24E1E" },
         { name: "React 19", img: reactblender, color: "#61DAFB" },
@@ -123,7 +123,7 @@ function Projects() {
       title: "High-End 3D Visualizations",
       tagline: "Featured Project",
       description:
-        "Backed by one year of intensive experience in Blender 3D, I create photorealistic 3D models, custom product mockups, and high-end studio renders. Capable of designing and staging any custom 3D mockup or scene from concept to final render—focused on clean geometry, advanced material shaders (glass, matte paint, brushed metals), and precise studio lighting to achieve commercial-grade product visualizations.",
+        "Backed by one year of intensive experience in Blender 3D, I create photorealistic 3D models, custom product mockups, and high-end studio renders. I design and stage custom 3D mockups or scenes from concept to final render—focused on clean geometry, advanced material shaders (glass, matte paint, brushed metals), and precise studio lighting to achieve commercial-grade product visualizations.",
       techStack: [
         { name: "Blender 3D", img: blendericon, color: "#F5792A" },
       ],
@@ -133,81 +133,99 @@ function Projects() {
 
   return (
     <div className="w-full h-auto bg-black">
-      <div className="w-full max-w-360 h-auto px-4 md:px-8 mx-auto py-12 md:py-20">
+      <div className="w-full max-w-360 h-auto px-fluid-x mx-auto py-12 md:py-20">
         <div className="w-full h-auto flex flex-col gap-6 md:gap-12">
-          
           <div className="w-full h-auto flex flex-col items-center text-center gap-2">
             <h2 className="text-3xl md:text-5xl font-medium text-white font-clash">
-              Real <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">Projects</span>. Real <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">Complexity</span>.
+              Real{" "}
+              <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">
+                Projects
+              </span>
+              . Real{" "}
+              <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">
+                Complexity
+              </span>
+              .
             </h2>
             <h2 className="text-3xl md:text-5xl font-medium text-white font-clash">
-              Real Proof of <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">Skill</span>.
+              Real Proof of{" "}
+              <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6]">
+                Skill
+              </span>
+              .
             </h2>
           </div>
 
-          <div 
-            ref={containerRef} 
+          <div
+            ref={containerRef}
             className="relative flex items-center justify-center h-[217px] md:h-[380px] mt-8 md:mt-12"
           >
-            <img 
-              alt="Weather Dashboard" 
-              draggable="false" 
-              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out" 
-              src={project1} 
+            <img
+              alt="Weather Dashboard"
+              draggable="false"
+              loading="lazy"
+              decoding="async"
+              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
+              src={project1}
               style={{
                 zIndex: 1,
                 transformOrigin: "center bottom",
                 transform: `translateX(${interpolate(0, leftX)}px) translateY(${interpolate(0, sideY)}px) rotate(${interpolate(0, -sideRotate)}deg) scale(${interpolate(0.7, 1)})`,
-                opacity: scrollProgress
-              }} 
+                opacity: scrollProgress,
+              }}
             />
 
-            <img 
-              alt="Portfolio Web" 
-              draggable="false" 
-              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out" 
-              src={project3} 
+            <img
+              alt="Portfolio Web"
+              draggable="false"
+              loading="lazy"
+              decoding="async"
+              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
+              src={project3}
               style={{
                 zIndex: 2,
                 transformOrigin: "center bottom",
                 transform: `translateX(0px) translateY(${interpolate(0, centerY)}px) rotate(0deg) scale(${interpolate(0.7, 1)})`,
-                opacity: scrollProgress
-              }} 
+                opacity: scrollProgress,
+              }}
             />
 
-            <img 
-              alt="Moon E-Commerce" 
-              draggable="false" 
-              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out" 
-              src={project2} 
+            <img
+              alt="Moon E-Commerce"
+              draggable="false"
+              loading="lazy"
+              decoding="async"
+              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
+              src={project2}
               style={{
                 zIndex: 3,
                 transformOrigin: "center bottom",
                 transform: `translateX(${interpolate(0, rightX)}px) translateY(${interpolate(0, sideY)}px) rotate(${interpolate(0, sideRotate)}deg) scale(${interpolate(0.7, 1)})`,
-                opacity: scrollProgress
-              }} 
+                opacity: scrollProgress,
+              }}
             />
 
-            <img 
-              alt="Projects Folder" 
-              draggable="false" 
-              className="relative w-[190px] md:w-[360px] object-contain select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] z-10" 
-              src={foldericon} 
+            <img
+              alt="Projects Folder"
+              draggable="false"
+              loading="lazy"
+              decoding="async"
+              className="relative w-[190px] md:w-[360px] object-contain select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] z-10"
+              src={foldericon}
             />
           </div>
 
           <div className="w-full flex flex-col relative mt-12 space-y-12">
             {projectsList.map((project, index) => (
-            <StickyProjectCard
-            key={project.id}
-            project={project}
-            index={index}
-            hoveredTechIndex={hoveredTechIndex}
-            setHoveredTechIndex={setHoveredTechIndex}
-            />
+              <StickyProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                hoveredTechIndex={hoveredTechIndex}
+                setHoveredTechIndex={setHoveredTechIndex}
+              />
             ))}
           </div>
-
         </div>
       </div>
     </div>

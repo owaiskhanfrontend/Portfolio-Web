@@ -1,31 +1,34 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import isometriclayer from "../../assets/Home assets/hero_bg.webp";
-import rockscene from "../../assets/Home assets/final2.webp";
+import HUD from "../../assets/Home assets/hud.webp";
 
 function Hero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end center"]
+    offset: ["start start", "end center"],
   });
 
   const sceneScale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-[1440px] xl:max-w-[1600px] h-auto px-fluid-x mx-auto pb-20">
-      
+    <div
+      ref={containerRef}
+      className="relative w-full max-w-[1440px] xl:max-w-[1600px] h-auto px-fluid-x mx-auto pb-20"
+    >
       <div className="hidden md:flex absolute inset-0 w-full h-full justify-center items-center pointer-events-none z-0">
-        <img 
-          src={isometriclayer} 
-          alt="Isometric Background" 
-          className="md:w-[82%] md:h-[82%] lg:w-[92%] lg:h-[92%] xl:w-full xl:h-full object-contain lg:opacity-100 mix-blend-screen transition-all duration-300" 
+        <img
+          src={isometriclayer}
+          alt="Isometric Background"
+          loading="eager"
+          decoding="async"
+          className="md:w-[82%] md:h-[82%] lg:w-[92%] lg:h-[92%] xl:w-full xl:h-full object-contain lg:opacity-100 mix-blend-screen transition-all duration-300"
         />
       </div>
 
       <div className="relative z-10 w-full flex flex-col items-center gap-6 pt-26 md:pt-34">
-        
         <div className="w-full flex flex-col items-center gap-3 text-center">
           <span className="text-display-4 font-poppins font-medium text-white/70 tracking-wide">
             Owais Khan — Creative Frontend Engineer
@@ -44,17 +47,23 @@ function Hero() {
         </p>
 
         <div className="w-full max-w-3xl mx-auto flex items-center justify-center relative pt-5 md:pt-7 px-4">
-          <motion.div 
+          <motion.div
             style={{ scale: sceneScale }}
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="relative w-full flex items-center justify-center pointer-events-none"
           >
-            <img 
-              src={rockscene} 
-              alt="3D Rock Scene Portal" 
-              className="w-full h-auto object-contain select-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-            />
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="w-full flex items-center justify-center"
+            >
+              <img
+                src={HUD}
+                alt="HUD"
+                loading="eager"
+                decoding="async"
+                className="w-full h-auto object-contain select-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
