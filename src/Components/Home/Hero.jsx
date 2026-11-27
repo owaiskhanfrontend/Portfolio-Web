@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import isometriclayer from "../../assets/Home assets/hero_bg.webp";
+import isometriclayer from "../../assets/Home assets/isometric.webp";
 import HUD from "../../assets/Home assets/hud.webp";
 
 function Hero() {
@@ -16,7 +16,7 @@ function Hero() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[1440px] xl:max-w-[1600px] h-auto px-fluid-x mx-auto pb-20"
+      className="relative w-full max-w-360 xl:max-w-[1600px] h-auto px-fluid-x mx-auto pb-20"
     >
       <div className="hidden md:flex absolute inset-0 w-full h-full justify-center items-center pointer-events-none z-0">
         <img
@@ -33,7 +33,7 @@ function Hero() {
           <span className="text-display-4 font-poppins font-medium text-white/70 tracking-wide">
             Owais Khan — Creative Frontend Engineer
           </span>
-          <h1 className="text-display-8 md:text-display-10 lg:text-[4.5rem] leading-[1.1] font-clash font-bold text-white max-w-5xl">
+          <h1 className="text-display-8 md:text-display-10 xl:text-display-11 leading-[1.1] font-clash font-bold text-white max-w-5xl">
             Architecting{" "}
             <span className="text-[#6eeb2c] [text-shadow:0_0_15px_#6eeb2ca6,0_0_30px_#6eeb2c4d]">
               Immersive UIs
@@ -42,7 +42,7 @@ function Hero() {
           </h1>
         </div>
 
-        <p className="text-lg md:text-xl max-w-3xl mx-auto text-center font-poppins font-normal text-white/60 leading-relaxed">
+        <p className="text-display-4 md:text-display-5 max-w-3xl mx-auto text-center font-poppins font-normal text-white/60 leading-relaxed">
           Fusing production-grade React architecture, robust state management, Figma to Code, and seamless REST API integrations with interactive 3D assets to build web apps that are as powerful as they are visually striking.
         </p>
 

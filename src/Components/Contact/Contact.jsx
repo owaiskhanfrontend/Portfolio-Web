@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import human_hand from "../../assets/contact assets/hand_left.webp";
-import robo_hand from "../../assets/contact assets/robo_hand.webp";
+import robo_hand from "../../assets/contact assets/robo_right.webp";
 
 function Contact() {
   const containerRef = useRef(null);
@@ -119,10 +119,10 @@ function Contact() {
         </div>
       </div>
 
-      <div className="w-full relative h-[220px] sm:h-[340px] md:h-[480px] lg:h-[540px] flex items-center justify-center my-2 pointer-events-none">
+      <div className="w-full relative h-55 sm:h-85 md:h-120 lg:h-135 flex items-center justify-center my-2 pointer-events-none">
         <motion.div
           style={{ x: leftHandX }}
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-[50vw] sm:w-[49vw] md:w-[48vw] max-w-[820px] flex justify-end z-20"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-[50vw] sm:w-[49vw] md:w-[48vw] max-w-205 flex justify-end z-20"
         >
           <img
             src={human_hand}
@@ -135,7 +135,7 @@ function Contact() {
 
         <motion.div
           style={{ x: rightHandX }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-[50vw] sm:w-[49vw] md:w-[48vw] max-w-[820px] flex justify-start z-20"
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-[50vw] sm:w-[49vw] md:w-[48vw] max-w-205 flex justify-start z-20"
         >
           <img
             src={robo_hand}
@@ -157,7 +157,7 @@ function Contact() {
 
       <div className="w-full max-w-4xl px-4 md:px-8 mx-auto z-30 -mt-8 sm:-mt-12 md:-mt-16">
         <div className="w-full bg-[#0a0a0a]/90 border border-[#222222] rounded-2xl p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center text-center shadow-[0_0_35px_rgba(168,85,247,0.15)] relative overflow-hidden backdrop-blur-md">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-purple-500/70 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-purple-500/70 to-transparent"></div>
 
           <div className="inline-flex items-center justify-center gap-2.5 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-display-1 sm:text-display-2 font-poppins font-medium mb-4">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />

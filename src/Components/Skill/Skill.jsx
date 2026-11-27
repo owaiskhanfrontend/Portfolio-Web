@@ -39,7 +39,7 @@ function Skill() {
       `}</style>
 
       <div
-        className="absolute top-35 left-13 w-[500px] md:w-[600px] h-[500px] md:h-[600px] pointer-events-none z-0 -translate-x-1/3 -translate-y-1/4 opacity-100"
+        className="absolute top-35 left-13 w-125 md:w-150 h-125 md:h-150 pointer-events-none z-0 -translate-x-1/3 -translate-y-1/4 opacity-100"
         style={{
           background:
             "radial-gradient(circle, rgba(168,85,247,0.35) 0%, rgba(126,34,206,0.15) 45%, rgba(0,0,0,0) 60%)",
@@ -78,7 +78,7 @@ function Skill() {
                       : "0 4px 20px rgba(0,0,0,0.5)",
                   }}
                 >
-                  <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none p-[1px] z-0">
+                  <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none p-px z-0">
                     <div className="absolute inset-[-100%] animate-spin-border flex items-center justify-center">
                       <div
                         className="w-[300%] h-[300%]"

@@ -54,14 +54,14 @@ function Footer() {
                 className="w-10 h-10 object-contain"
               />
               <span className="font-clash font-bold text-xl tracking-wider text-white">
-                Owais Khan
+                Personal
               </span>
             </div>
 
-            <p className="font-poppins text-[15px] font-light leading-6.5 text-white/90 max-w-[340px]">
-              Creative portfolio built to showcase my frontend engineering skills,
-              React 19 and Tailwind CSS v4 architecture, interactive UI motion,
-              and custom Blender 3D projects.
+            <p className="font-poppins text-display-3 font-light leading-6.5 text-white/90 max-w-85">
+              Creative portfolio built to showcase my projects and front-end
+              development skills through React 19, Tailwind CSS v4, interactive UI
+              motion, and custom Blender 3D visuals.
             </p>
 
             <div className="flex items-center gap-3">
@@ -117,7 +117,7 @@ function Footer() {
                 href="https://github.com/owaiskhanfrontend?tab=repositories"
                 target="_blank"
                 rel="noreferrer"
-                className="h-11 px-6 border border-white text-[13px] font-poppins font-semibold uppercase tracking-widest hover:bg-white hover:text-[#2a0845] transition-colors flex items-center gap-2"
+                className="h-11 px-6 border border-white text-display-2 font-poppins font-semibold uppercase tracking-widest hover:bg-white hover:text-[#2a0845] transition-colors flex items-center gap-2"
               >
                 View GitHub <span>→</span>
               </a>
@@ -131,12 +131,6 @@ function Footer() {
               </h3>
               <div className="flex flex-col gap-4 font-poppins text-display-2 font-light text-white/80">
                 <a
-                  href="mailto:owaiskhan.frontend@gmail.com"
-                  className="hover:text-white transition-colors w-fit"
-                >
-                  Email Me
-                </a>
-                <a
                   href="https://wa.me/923158174161"
                   target="_blank"
                   rel="noreferrer"
@@ -144,12 +138,7 @@ function Footer() {
                 >
                   WhatsApp
                 </a>
-                <a
-                  href="tel:+923183668327"
-                  className="hover:text-white transition-colors w-fit"
-                >
-                  +92 318 3668327
-                </a>
+               
                 <span
                   onClick={() => scrollToSection("About")}
                   className="hover:text-white transition-colors w-fit cursor-pointer"
@@ -174,7 +163,7 @@ function Footer() {
                   onClick={() => scrollToSection("Skill")}
                   className="hover:text-white transition-colors w-fit cursor-pointer"
                 >
-                  React 19 & Context
+                  React 19
                 </span>
                 <span
                   onClick={() => scrollToSection("Skill")}
@@ -198,7 +187,7 @@ function Footer() {
                   onClick={() => scrollToSection("Skill")}
                   className="hover:text-white transition-colors w-fit cursor-pointer"
                 >
-                  REST APIs
+                  Figma To Code
                 </span>
               </div>
             </div>
@@ -243,7 +232,7 @@ function Footer() {
           aria-hidden="true"
           className="w-full overflow-hidden select-none pointer-events-none mt-4 flex justify-center"
         >
-          <span className="font-clash font-bold uppercase text-white/[0.06] text-3xl md:text-7xl lg:text-[6rem] xl:text-[7.5rem] leading-none tracking-[0.14em] whitespace-nowrap">
+          <span className="font-clash font-bold uppercase text-white/[0.06] text-display-7 md:text-display-11 lg:text-display-12 xl:text-[7.5rem] leading-none tracking-[0.14em] whitespace-nowrap">
             OWAIS KHAN
           </span>
         </div>

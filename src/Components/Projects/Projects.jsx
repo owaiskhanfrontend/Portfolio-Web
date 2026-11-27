@@ -3,7 +3,7 @@ import StickyProjectCard from "./StickyProjectCard";
 import foldericon from "../../assets/Projects assets/folderblender3.webp";
 import project1 from "../../assets/Projects assets/weather dashboard.png";
 import project2 from "../../assets/Projects assets/moon e commerce.png";
-import project3 from "../../assets/Projects assets/portfolio web.png";
+import project3 from "../../assets/Projects assets/portfolio web.jpg";
 
 import pcui from "../../assets/Projects assets/pc ui card-1.jpg";
 import pcui2 from "../../assets/Projects assets/pc ui card-2.jpg";
@@ -158,14 +158,14 @@ function Projects() {
 
           <div
             ref={containerRef}
-            className="relative flex items-center justify-center h-[217px] md:h-[380px] mt-8 md:mt-12"
+            className="relative flex items-center justify-center h-54.25 md:h-95 mt-8 md:mt-12"
           >
             <img
               alt="Weather Dashboard"
               draggable="false"
               loading="lazy"
               decoding="async"
-              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
+              className="absolute w-23.75 md:w-45 object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
               src={project1}
               style={{
                 zIndex: 1,
@@ -180,7 +180,7 @@ function Projects() {
               draggable="false"
               loading="lazy"
               decoding="async"
-              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
+              className="absolute w-23.75 md:w-45 object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
               src={project3}
               style={{
                 zIndex: 2,
@@ -195,7 +195,7 @@ function Projects() {
               draggable="false"
               loading="lazy"
               decoding="async"
-              className="absolute w-[95px] md:w-[180px] object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
+              className="absolute w-23.75 md:w-45 object-contain rounded-lg shadow-2xl select-none pointer-events-none transition-transform duration-75 ease-out"
               src={project2}
               style={{
                 zIndex: 3,
@@ -210,7 +210,7 @@ function Projects() {
               draggable="false"
               loading="lazy"
               decoding="async"
-              className="relative w-[190px] md:w-[360px] object-contain select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] z-10"
+              className="relative w-47.5 md:w-90 object-contain select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] z-10"
               src={foldericon}
             />
           </div>

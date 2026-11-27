@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import Background from "../../assets/Home assets/Background_001.png";
+import Background from "../../assets/Home assets/background.png";
 
 function Home() {
   return (

@@ -34,7 +34,7 @@ function About() {
   return (
     <div className="w-full bg-black relative overflow-hidden">
       <div
-        className="absolute top-37 right-13 w-[500px] md:w-[650px] h-[500px] md:h-[650px] pointer-events-none z-0 translate-x-1/3 -translate-y-1/4 opacity-100"
+        className="absolute top-37 right-13 w-125 md:w-162.5 h-125 md:h-162.5 pointer-events-none z-0 translate-x-1/3 -translate-y-1/4 opacity-100"
         style={{
           background:
             "radial-gradient(circle, rgba(168,85,247,0.35) 0%, rgba(126,34,206,0.15) 45%, rgba(0,0,0,0) 70%)",
@@ -63,12 +63,12 @@ function About() {
         </div>
 
         <div className="relative w-full pt-8">
-          <div className="hidden lg:block absolute top-[4rem] left-[10%] right-[10%] h-[2px] bg-purple-600/40 z-0"></div>
+          <div className="hidden lg:block absolute top-16 left-[10%] right-[10%] h-0.5 bg-purple-600/40 z-0"></div>
 
-          <div className="hidden md:block lg:hidden absolute top-[5rem] left-[19%] right-[19%] h-[2px] bg-purple-600/40 z-0"></div>
-          <div className="hidden md:block lg:hidden absolute top-[22rem] left-[19%] right-[19%] h-[2px] bg-purple-600/40 z-0"></div>
+          <div className="hidden md:block lg:hidden absolute top-20 left-[19%] right-[19%] h-0.5 bg-purple-600/40 z-0"></div>
+          <div className="hidden md:block lg:hidden absolute top-88 left-[19%] right-[19%] h-0.5 bg-purple-600/40 z-0"></div>
 
-          <div className="block md:hidden absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-[2px] bg-purple-600/40 z-0"></div>
+          <div className="block md:hidden absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-0.5 bg-purple-600/40 z-0"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-12 relative z-10">
             {details.map((item) => (
